@@ -469,7 +469,7 @@
             word-break: break-all;
         }
 
-        /* Estilos dos Depoimentos (Sem imagens externas, ícones seguros em CSS) */
+        /* Estilos dos Depoimentos e Avatares Circulares */
         .testimonials-section {
             background-color: #ffffff;
             color: #222222;
@@ -510,7 +510,20 @@
         }
 
         .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             margin-bottom: 12px;
+        }
+
+        /* Moldura circular perfeita para a foto */
+        .testimonial-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+            border: 2px solid #d85a2f;
+            flex-shrink: 0;
         }
 
         .testimonial-user-info h3 {
@@ -552,21 +565,13 @@
             padding: 10px 15px;
             border-radius: 6px;
             border: 1px solid #eeeeee;
-            max-width: 480px;
+            max-width: 450px;
         }
 
-        /* Ícone seguro estilizado em CSS para substituir as imagens quebradas */
-        .safe-bottle-icon {
-            background: linear-gradient(135deg, #1a2b35 0%, #081b22 100%);
-            color: #ffc107;
-            font-weight: bold;
-            font-size: 11px;
-            text-align: center;
-            padding: 6px 10px;
-            border-radius: 4px;
-            letter-spacing: 0.5px;
-            flex-shrink: 0;
-            border: 1px solid #333;
+        .testimonial-product-thumb {
+            width: 45px;
+            height: auto;
+            object-fit: contain;
         }
 
         .testimonial-author-details {
@@ -598,7 +603,7 @@
     <section class="hero-centered">
         <h1>Unleash Your Metabolic Potential</h1>
         <p>Boost Calorie Burning & Feel Amazing with MounjaBoost.</p>
-        <img src="hero-product.png" alt="MounjaBoost Bottle" class="hero-top-img">
+        <img src="foto_frasco_topo.webp" alt="MounjaBoost Bottle" class="hero-top-img">
     </section>
 
     <!-- Faixa Laranja -->
@@ -615,7 +620,7 @@
             <div class="card-body">
                 <div class="package-title">1 BOTTLE</div>
                 <div class="supply-text">30 Day Supply</div>
-                <img src="bottle-1.png" alt="1 Bottle" class="product-image">
+                <img src="caminho_da_foto_1_frasco.webp" alt="1 Bottle" class="product-image">
                 <div class="main-price">$69</div>
                 <div style="height: 28px;"></div>
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
@@ -628,7 +633,7 @@
             <div class="card-body">
                 <div class="package-title">6 BOTTLES</div>
                 <div class="supply-text">180 Day Supply</div>
-                <img src="bottle-6.png" alt="6 Bottles" class="product-image">
+                <img src="caminho_da_foto_6_frascos.webp" alt="6 Bottles" class="product-image">
                 <div class="main-price">$294</div>
                 <div class="per-bottle">($49 per bottle)</div>
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
@@ -641,7 +646,7 @@
             <div class="card-body">
                 <div class="package-title">3 BOTTLES</div>
                 <div class="supply-text">90 Day Supply</div>
-                <img src="bottle-3.png" alt="3 Bottles" class="product-image">
+                <img src="caminho_da_foto_3_frascos.png" alt="3 Bottles" class="product-image">
                 <div class="main-price">$177</div>
                 <div class="per-bottle">($59 per bottle)</div>
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
@@ -656,17 +661,17 @@
             <h2>100% SATISFACTION<br>60-DAY MONEY BACK GUARANTEE</h2>
             
             <div class="guarantee-flex">
-                <img src="guarantee-badge.png" alt="60 Day Money Back Guarantee" class="guarantee-badge">
+                <img src="selo-garantia.png" alt="60 Day Money Back Guarantee" class="guarantee-badge">
                 <div class="guarantee-text">
                     Your order today is protected by my iron-clad 60-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy, or shocked as you admire your new toned, slim body in the mirror, then at any time in the next 60 days let us know and we’ll refund every single penny of your investment. <strong>Simply return the unused bottles in perfect condition and we will immediately process your full refund for the unused intens. No questions asked.</strong>
                 </div>
             </div>
 
             <div class="certifications-container">
-                <img src="cert-usa.png" alt="Made in USA" class="cert-badge">
-                <img src="cert-gmo.png" alt="GMO Free" class="cert-badge">
-                <img src="cert-gmp.png" alt="GMP Certified" class="cert-badge">
-                <img src="cert-fda.png" alt="FDA Approved" class="cert-badge">
+                <img src="selo-usa.png" alt="Made in USA" class="cert-badge">
+                <img src="selo-gmo.png" alt="GMO Free" class="cert-badge">
+                <img src="selo-gmp.png" alt="GMP Certified" class="cert-badge">
+                <img src="selo-fda.png" alt="FDA Approved" class="cert-badge">
             </div>
 
             <p class="manufacture-text">Mounjaboost is proudly manufactured in the USA with the finest of domestic and foreign ingredients.</p>
@@ -680,28 +685,28 @@
         
         <div class="special-bonus-container">
             <div class="special-bonus-label">SPECIAL BONUS:<br>SLIM APP</div>
-            <img src="slim-app-mockup.png" alt="Slim App" class="app-mockup">
+            <img src="foto_app.png" alt="Slim App" class="app-mockup">
         </div>
 
         <p class="bonuses-intro-text">Plus, inside SlimApp You'll fing 3 special bonuses to increase your fat-burning process with simple tips for your daily routine:</p>
 
         <div class="bonuses-grid">
             <div class="bonus-card">
-                <img src="bonus-gut-detox.png" alt="24-Hour Gut Detox">
+                <img src="foto_bonus_1.png" alt="24-Hour Gut Detox">
                 <h4>BONUS #1</h4>
                 <h3>24-Gut Detox</h3>
                 <p>Detox, cleanse and flush your organs with a "Bariatric Seed" to balance your hormones in just 24 hours, helping deflate fat cells 322% faster and boosts metabolism using a everyday orange-colored fruit that you may have in your kitchen.</p>
             </div>
 
             <div class="bonus-card">
-                <img src="bonus-zero-sagging.png" alt="Zero Sagging">
+                <img src="foto_bonus_2.png" alt="Zero Sagging">
                 <h4>BONUS #2</h4>
                 <h3>Zero Sagging</h3>
                 <p>A simple at home ritual using Apple Cider Vinegar used by top models, singers and celebrities to keep their skin firm, smooth, and youthful, even as they age, plus boosting collagen production reducing wrinkles and fine lines, making you feel younger right after usage.</p>
             </div>
 
             <div class="bonus-card">
-                <img src="bonus-wild-libido.png" alt="Wild Libido">
+                <img src="foto_bonus_3.png" alt="Wild Libido">
                 <h4>BONUS #3</h4>
                 <h3>Wild Libido</h3>
                 <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
@@ -724,7 +729,7 @@
             <p class="scientific-lead">A groundbreaking new study from Harvard University has revealed a surprising cause behind why millions of people struggle to lose weight — even when eating right and exercising regularly.</p>
 
             <div class="scientific-content-flex">
-                <img src="harvard-lab.png" alt="Harvard Scientists Lab Team" class="scientific-img">
+                <img src="david_sinclair_team_lab-2905188198-o_2_2.jpg" alt="Harvard Scientists Lab Team" class="scientific-img">
                 <div class="scientific-flex-text">
                     <p>According to the research, the real culprit isn't just slow metabolism or poor lifestyle choices...</p>
                     <p>It's something called <strong>"fat cell inflammation."</strong></p>
@@ -748,12 +753,12 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE DEPOIMENTOS (APENAS NOMES + ÍCONES SEGUROS EM CSS) -->
+    <!-- SEÇÃO DE DEPOIMENTOS COM FOTOS NOS CÍRCULOS -->
     <section class="testimonials-section">
         <div class="testimonials-container">
             <h2 class="testimonials-main-title">Real Mounjaboost Users.<br><span>Real Life-Changing Results.</span></h2>
 
-            <!-- Depoimento 1: Sophie -->
+           <!-- Depoimento 1: Sophie -->
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-user-info">
@@ -766,7 +771,7 @@
                 </div>
                 <p class="testimonial-quote">"I always felt self-conscious about my appearance, especially in social situations. Since trying MounjaBoost, I've lost 35 pounds, and for the first time in years, I actually enjoy looking in the mirror. It's incredible how this change has boosted my confidence and made me feel like myself again!"</p>
                 <div class="testimonial-footer-info">
-                    <div class="safe-bottle-icon">6 BOTTLES</div>
+                    <img src="bottle-6.png" alt="6 Bottles Package" class="testimonial-product-thumb">
                     <div class="testimonial-author-details">
                         <strong>Sophie R.</strong> - Austin, TX<br>
                         Purchased Mounjaboost 6 Bottles Package
@@ -787,7 +792,7 @@
                 </div>
                 <p class="testimonial-quote">"No matter what I tried, my weight just wouldn't budge, especially around my belly. MounjaBoost kick-started my metabolism and finally helped me shed 29 stubborn pounds. I feel lighter and more energetic, and my clothes are fitting so much better now – it's a huge relief."</p>
                 <div class="testimonial-footer-info">
-                    <div class="safe-bottle-icon">3 BOTTLES</div>
+                    <img src="bottle-3.png" alt="3 Bottles Package" class="testimonial-product-thumb">
                     <div class="testimonial-author-details">
                         <strong>Daniel M.</strong> - Orlando, FL<br>
                         Purchased Mounjaboost 3 Bottles Package
@@ -808,7 +813,16 @@
                 </div>
                 <p class="testimonial-quote">"Being overweight made even basic activities exhausting. I could hardly play with my kids without feeling out of breath. After using MounjaBoost, I've dropped 40 pounds, and I can keep up with my kids without feeling tired all the time. I have my energy and freedom back!"</p>
                 <div class="testimonial-footer-info">
-                    <div class="safe-bottle-icon">6 BOTTLES</div>
+                    <img src="bottle-6.png" alt="6 Bottles Package" class="testimonial-product-thumb">
+                    <div class="testimonial-author-details">
+                        <strong>Rachel T.</strong> - Denver, CO<br>
+                        Purchased Mounjaboost 6 Bottles Package
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Being overweight made even basic activities exhausting. I could hardly play with my kids without feeling out of breath. After using MounjaBoost, I've dropped 40 pounds, and I can keep up with my kids without feeling tired all the time. I have my energy and freedom back!"</p>
+                <div class="testimonial-footer-info">
+                    <img src="caminho_da_foto_6_frascos.webp" alt="6 Bottles Package" class="testimonial-product-thumb">
                     <div class="testimonial-author-details">
                         <strong>Rachel T.</strong> - Denver, CO<br>
                         Purchased Mounjaboost 6 Bottles Package
