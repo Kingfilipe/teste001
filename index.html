@@ -469,7 +469,7 @@
             word-break: break-all;
         }
 
-        /* Estilos da Nova Seção: Testemunhos / Depoimentos */
+        /* Estilos dos Depoimentos e Avatares Circulares */
         .testimonials-section {
             background-color: #ffffff;
             color: #222222;
@@ -516,12 +516,14 @@
             margin-bottom: 12px;
         }
 
+        /* Moldura circular perfeita para a foto */
         .testimonial-avatar {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
             border: 2px solid #d85a2f;
+            flex-shrink: 0;
         }
 
         .testimonial-user-info h3 {
@@ -712,7 +714,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: Harvard Scientific Discovery -->
+    <!-- Seção: Harvard Scientific Discovery -->
     <section class="scientific-section">
         <div class="scientific-container">
             <div class="scientific-shipping-banner">
@@ -751,7 +753,7 @@
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: Depoimentos de Usuários Reais -->
+    <!-- SEÇÃO DE DEPOIMENTOS COM FOTOS NOS CÍRCULOS -->
     <section class="testimonials-section">
         <div class="testimonials-container">
             <h2 class="testimonials-main-title">Real Mounjaboost Users.<br><span>Real Life-Changing Results.</span></h2>
