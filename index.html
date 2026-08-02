@@ -87,64 +87,68 @@
             padding: 16px;
             font-size: 18px;
             text-transform: uppercase;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
 
-        /* Seção de Free Bonuses */
+        /* Seção de Free Bonuses logo abaixo do banner */
         .bonuses-section {
-            padding: 60px 20px;
-            background-color: #06141a;
-            border-top: 1px solid #11303d;
-            border-bottom: 1px solid #11303d;
-            margin-bottom: 60px;
+            padding: 20px 20px 50px 20px;
+            background-color: #081b22;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .bonuses-title {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: bold;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.3;
         }
 
         .bonuses-title span {
             color: #ffc107;
+            text-decoration: underline;
         }
 
         .bonuses-subtitle {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            font-size: 15px;
+            max-width: 850px;
+            margin: 0 auto 35px auto;
+            font-size: 14px;
             color: #d1d5db;
             line-height: 1.6;
         }
 
-        .app-highlight-box {
-            background-color: #09202a;
-            border: 2px solid #184152;
-            border-radius: 12px;
-            max-width: 500px;
-            margin: 0 auto 50px auto;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        .special-bonus-container {
+            margin-bottom: 40px;
         }
 
-        .app-highlight-box h3 {
+        .special-bonus-label {
             color: #ffc107;
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        .bonus-img-placeholder {
+        .app-mockup {
             width: 100%;
-            max-width: 220px;
+            max-width: 240px;
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            border: 2px solid #184152;
+        }
+
+        .bonuses-intro-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            font-size: 14px;
+            color: #d1d5db;
+            line-height: 1.5;
         }
 
         .bonuses-grid {
@@ -152,26 +156,24 @@
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
-            max-width: 1100px;
-            margin: 0 auto;
         }
 
         .bonus-card {
             background-color: #09202a;
-            border: 1px solid #184152;
-            border-radius: 8px;
-            width: 320px;
+            border: 2px solid #184152;
+            border-radius: 10px;
+            width: 300px;
             padding: 25px 20px;
             text-align: left;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .bonus-card img {
             width: 100%;
-            max-height: 200px;
+            max-height: 180px;
             object-fit: contain;
             border-radius: 6px;
             margin-bottom: 20px;
@@ -179,27 +181,29 @@
 
         .bonus-card h4 {
             color: #ffc107;
-            font-size: 12px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 5px;
             text-align: center;
             width: 100%;
+            font-weight: bold;
         }
 
         .bonus-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             color: #ffffff;
             margin-bottom: 15px;
             text-align: center;
             width: 100%;
+            font-weight: bold;
         }
 
         .bonus-card p {
             font-size: 13px;
-            color: #b0c4de;
+            color: #d1d5db;
             line-height: 1.5;
-            text-align: center;
+            text-align: left;
         }
 
         /* Seção de Preços (Cards) */
@@ -208,7 +212,7 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            padding: 0 20px 60px 20px;
+            padding: 20px 20px 60px 20px;
         }
 
         .pricing-card {
@@ -350,40 +354,42 @@
         Claim Your Discounted Mounjaboost Below For Huge Savings
     </div>
 
-    <!-- Seção de Free Bonuses (Vinculada ao Menu) -->
+    <!-- Seção de Free Bonuses Logo Abaixo do Banner -->
     <section id="bonuses" class="bonuses-section">
-        <h2 class="bonuses-title">Order 6 Bottles or 3 Bottles<br>and Get a <span>Free Master Bonus!</span></h2>
-        <p class="bonuses-subtitle">Access to a digital companion platform to help track your daily routine and support your wellness goals. Access details will be sent directly to your registered email after purchase.</p>
+        <h2 class="bonuses-title">Order <span style="color:#ffc107;">6 Bottles</span> or <span style="color:#ffc107;">3 Bottles</span><br>and Get a Free Master Bonus!</h2>
+        <p class="bonuses-subtitle">Access to a mobile app where you will fill your age, heigh, weight and more details to get a personalized program of how to use Mounjaboost in your right proportions to get the best results. After completing your purchase, access details for the app will be sent directly to your registered email.</p>
         
-        <!-- Destaque do Aplicativo/Master Bonus -->
-        <div class="app-highlight-box">
-            <h3>Special Bonus: Wellness App</h3>
-            <img src="caminho_da_foto_6_frascos.webp" alt="Wellness App" class="bonus-img-placeholder">
-            <p style="font-size: 13px; color: #b0c4de;">Includes custom planning tools and routine guides designed to maximize your results every day.</p>
+        <!-- Destaque Slim App -->
+        <div class="special-bonus-container">
+            <div class="special-bonus-label">SPECIAL BONUS:<br>SLIM APP</div>
+            <!-- Substitua pelo arquivo de imagem real do app quando tiver -->
+            <img src="caminho_da_foto_6_frascos.webp" alt="Slim App" class="app-mockup">
         </div>
 
-        <!-- Grade com os 3 Bônus -->
+        <p class="bonuses-intro-text">Plus, inside SlimApp You'll fing 3 special bonuses to increase your fat-burning process with simple tips for your daily routine:</p>
+
+        <!-- Grade com os 3 Bônus Oficiais -->
         <div class="bonuses-grid">
             
             <!-- Bônus 1 -->
             <div class="bonus-card">
-                <h4>Bonus #1</h4>
-                <h3>Daily Vitality Guide</h3>
-                <p>Simple morning routines and natural adjustments designed to support sustained daily energy levels and balance your routine naturally.</p>
+                <h4>BONUS #1</h4>
+                <h3>24-Gut Detox</h3>
+                <p>Detox, cleanse and flush your organs with a "Bariatric Seed" to balance your hormones in just 24 hours, helping deflate fat cells 322% faster and boosts metabolism using a everyday orange-colored fruit that you may have in your kitchen.</p>
             </div>
 
             <!-- Bônus 2 -->
             <div class="bonus-card">
-                <h4>Bonus #2</h4>
-                <h3>Tone & Firm Ritual</h3>
-                <p>Easy, natural home routines used by wellness enthusiasts to support skin elasticity, firmness, and natural collagen production.</p>
+                <h4>BONUS #2</h4>
+                <h3>Zero Sagging</h3>
+                <p>A simple at home ritual using Apple Cider Vinegar used by top models, singers and celebrities to keep their skin firm, smooth, and youthful, even as they age, plus boosting collagen production reducing wrinkles and fine lines, making you feel younger right after usage.</p>
             </div>
 
             <!-- Bônus 3 -->
             <div class="bonus-card">
-                <h4>Bonus #3</h4>
-                <h3>Evening Relaxation</h3>
-                <p>Guidance on evening unwinding routines and calming habits to help you reset, reduce daily stress, and enjoy restful nights.</p>
+                <h4>BONUS #3</h4>
+                <h3>Wild Libido</h3>
+                <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
             </div>
 
         </div>
