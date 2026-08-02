@@ -97,7 +97,7 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            padding: 0 20px 50px 20px;
+            padding: 0 20px 30px 20px;
         }
 
         .pricing-card {
@@ -190,13 +190,81 @@
             margin-top: 15px;
         }
 
+        /* Seção de Garantia e Certificações (Movida para cima dos Bônus) */
+        .guarantee-section {
+            background-color: #ffffff;
+            color: #333333;
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 2px solid #184152;
+            border-bottom: 2px solid #184152;
+        }
+
+        .guarantee-content {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .guarantee-section h2 {
+            font-size: 28px;
+            color: #0c222d;
+            margin-bottom: 25px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+
+        .guarantee-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .guarantee-badge {
+            width: 180px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .guarantee-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444444;
+            max-width: 680px;
+        }
+
+        /* Container dos 4 selos maiores na parte inferior */
+        .certifications-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .cert-badge {
+            width: 135px; /* Tamanho aumentado */
+            height: auto;
+        }
+
+        .manufacture-text {
+            font-size: 13px;
+            color: #666666;
+            margin-top: 20px;
+        }
+
         /* Seção de Free Bonuses */
         .bonuses-section {
-            padding: 30px 20px 60px 20px;
+            padding: 50px 20px 60px 20px;
             background-color: #081b22;
             max-width: 1000px;
             margin: 0 auto;
-            border-top: 1px solid #184152;
         }
 
         .bonuses-title {
@@ -300,73 +368,6 @@
             line-height: 1.5;
             text-align: left;
         }
-
-        /* Seção de Garantia */
-        .guarantee-section {
-            background-color: #ffffff;
-            color: #333333;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .guarantee-content {
-            max-width: 950px;
-            margin: 0 auto;
-        }
-
-        .guarantee-section h2 {
-            font-size: 28px;
-            color: #0c222d;
-            margin-bottom: 25px;
-            line-height: 1.3;
-            font-weight: bold;
-        }
-
-        .guarantee-flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            text-align: left;
-            margin-bottom: 40px;
-        }
-
-        .guarantee-badge {
-            width: 180px;
-            height: auto;
-            flex-shrink: 0;
-        }
-
-        .guarantee-text {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #444444;
-            max-width: 680px;
-        }
-
-        /* Container dos 4 selos na parte inferior */
-        .certifications-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .cert-badge {
-            width: 95px;
-            height: auto;
-        }
-
-        .manufacture-text {
-            font-size: 13px;
-            color: #666666;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -439,6 +440,31 @@
 
     </div>
 
+    <!-- Seção de Garantia e Certificações (Logo abaixo dos preços e acima dos bônus) -->
+    <section class="guarantee-section">
+        <div class="guarantee-content">
+            <h2>100% SATISFACTION<br>60-DAY MONEY BACK GUARANTEE</h2>
+            
+            <div class="guarantee-flex">
+                <!-- Selo de 60 dias ao lado do texto -->
+                <img src="selo-garantia.png" alt="60 Day Money Back Guarantee" class="guarantee-badge">
+                <div class="guarantee-text">
+                    Your order today is protected by my iron-clad 60-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy, or shocked as you admire your new toned, slim body in the mirror, then at any time in the next 60 days let us know and we’ll refund every single penny of your investment. <strong>Simply return the unused bottles in perfect condition and we will immediately process your full refund for the unused intens. No questions asked.</strong>
+                </div>
+            </div>
+
+            <!-- 4 Selos maiores na parte de baixo -->
+            <div class="certifications-container">
+                <img src="selo-usa.png" alt="Made in USA" class="cert-badge">
+                <img src="selo-gmo.png" alt="GMO Free" class="cert-badge">
+                <img src="selo-gmp.png" alt="GMP Certified" class="cert-badge">
+                <img src="selo-fda.png" alt="FDA Approved" class="cert-badge">
+            </div>
+
+            <p class="manufacture-text">Mounjaboost is proudly manufactured in the USA with the finest of domestic and foreign ingredients.</p>
+        </div>
+    </section>
+
     <!-- Seção de Free Bonuses -->
     <section id="bonuses" class="bonuses-section">
         <h2 class="bonuses-title">Order <span style="color:#ffc107;">6 Bottles</span> or <span style="color:#ffc107;">3 Bottles</span><br>and Get a <span style="color:#ffc107;">Free Master Bonus!</span></h2>
@@ -479,31 +505,6 @@
                 <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Seção de Garantia e Certificações -->
-    <section class="guarantee-section">
-        <div class="guarantee-content">
-            <h2>100% SATISFACTION<br>60-DAY MONEY BACK GUARANTEE</h2>
-            
-            <div class="guarantee-flex">
-                <!-- Selo de 60 dias ao lado do texto -->
-                <img src="selo-garantia.png" alt="60 Day Money Back Guarantee" class="guarantee-badge">
-                <div class="guarantee-text">
-                    Your order today is protected by my iron-clad 60-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy, or shocked as you admire your new toned, slim body in the mirror, then at any time in the next 60 days let us know and we’ll refund every single penny of your investment. <strong>Simply return the unused bottles in perfect condition and we will immediately process your full refund for the unused intens. No questions asked.</strong>
-                </div>
-            </div>
-
-            <!-- 4 Selos separados na parte de baixo -->
-            <div class="certifications-container">
-                <img src="selo-usa.png" alt="Made in USA" class="cert-badge">
-                <img src="selo-gmo.png" alt="GMO Free" class="cert-badge">
-                <img src="selo-gmp.png" alt="GMP Certified" class="cert-badge">
-                <img src="selo-fda.png" alt="FDA Approved" class="cert-badge">
-            </div>
-
-            <p class="manufacture-text">Mounjaboost is proudly manufactured in the USA with the finest of domestic and foreign ingredients.</p>
         </div>
     </section>
 
