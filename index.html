@@ -190,7 +190,7 @@
             margin-top: 15px;
         }
 
-        /* Seção de Garantia e Certificações (Com os 4 selos maiores) */
+        /* Seção de Garantia e Certificações */
         .guarantee-section {
             background-color: #ffffff;
             color: #333333;
@@ -368,7 +368,7 @@
             text-align: left;
         }
 
-        /* Estilos da Seção: Harvard Scientific Discovery */
+        /* Seção: Harvard Scientific Discovery */
         .scientific-section {
             background-color: #ffffff;
             color: #222222;
@@ -427,8 +427,8 @@
         .scientific-content-flex {
             display: flex;
             gap: 25px;
-            align-items: center; /* Alterado para centralizar o texto verticalmente ao lado da imagem */
-            margin-bottom: 20px;  /* Espaço reduzido para eliminar o vão excessivo */
+            align-items: center;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
@@ -449,7 +449,7 @@
         }
 
         .scientific-flex-text p {
-            margin-bottom: 10px; /* Reduzido o espaço entre os parágrafos ao lado da imagem */
+            margin-bottom: 10px;
         }
 
         .scientific-body-text {
@@ -467,6 +467,119 @@
             padding-top: 15px;
             line-height: 1.4;
             word-break: break-all;
+        }
+
+        /* Estilos da Nova Seção: Testemunhos / Depoimentos */
+        .testimonials-section {
+            background-color: #ffffff;
+            color: #222222;
+            padding: 60px 20px;
+            text-align: left;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .testimonials-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .testimonials-main-title {
+            text-align: center;
+            font-size: 34px;
+            color: #111111;
+            font-weight: bold;
+            margin-bottom: 40px;
+            line-height: 1.25;
+        }
+
+        .testimonials-main-title span {
+            color: #0c222d;
+            text-decoration: underline;
+        }
+
+        .testimonial-card {
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .testimonial-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d85a2f;
+        }
+
+        .testimonial-user-info h3 {
+            font-size: 20px;
+            color: #111111;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        .verified-text {
+            font-size: 13px;
+            color: #e69500;
+            font-weight: bold;
+            margin-left: 6px;
+        }
+
+        .testimonial-quote {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444444;
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #e69500;
+        }
+
+        .testimonial-footer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+            max-width: 450px;
+        }
+
+        .testimonial-product-thumb {
+            width: 45px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .testimonial-author-details {
+            font-size: 13px;
+            color: #333333;
+            line-height: 1.4;
+        }
+
+        .testimonial-author-details strong {
+            color: #111111;
         }
     </style>
 </head>
@@ -540,20 +653,18 @@
 
     </div>
 
-    <!-- Seção de Garantia e Certificações (Com os 4 selos maiores) -->
+    <!-- Seção de Garantia e Certificações -->
     <section class="guarantee-section">
         <div class="guarantee-content">
             <h2>100% SATISFACTION<br>60-DAY MONEY BACK GUARANTEE</h2>
             
             <div class="guarantee-flex">
-                <!-- Selo de 60 dias ao lado do texto -->
                 <img src="selo-garantia.png" alt="60 Day Money Back Guarantee" class="guarantee-badge">
                 <div class="guarantee-text">
                     Your order today is protected by my iron-clad 60-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy, or shocked as you admire your new toned, slim body in the mirror, then at any time in the next 60 days let us know and we’ll refund every single penny of your investment. <strong>Simply return the unused bottles in perfect condition and we will immediately process your full refund for the unused intens. No questions asked.</strong>
                 </div>
             </div>
 
-            <!-- 4 Selos maiores na parte de baixo -->
             <div class="certifications-container">
                 <img src="selo-usa.png" alt="Made in USA" class="cert-badge">
                 <img src="selo-gmo.png" alt="GMO Free" class="cert-badge">
@@ -570,7 +681,6 @@
         <h2 class="bonuses-title">Order <span style="color:#ffc107;">6 Bottles</span> or <span style="color:#ffc107;">3 Bottles</span><br>and Get a <span style="color:#ffc107;">Free Master Bonus!</span></h2>
         <p class="bonuses-subtitle">Access to a mobile app where you will fill your age, heigh, weight and more details to get a personalized program of how to use Mounjaboost in your right proportions to get the best results. After completing your purchase, access details for the app will be sent directly to your registered email.</p>
         
-        <!-- Destaque Slim App -->
         <div class="special-bonus-container">
             <div class="special-bonus-label">SPECIAL BONUS:<br>SLIM APP</div>
             <img src="foto_app.png" alt="Slim App" class="app-mockup">
@@ -578,10 +688,7 @@
 
         <p class="bonuses-intro-text">Plus, inside SlimApp You'll fing 3 special bonuses to increase your fat-burning process with simple tips for your daily routine:</p>
 
-        <!-- Grade com os 3 Bônus -->
         <div class="bonuses-grid">
-            
-            <!-- Bônus 1 -->
             <div class="bonus-card">
                 <img src="foto_bonus_1.png" alt="24-Hour Gut Detox">
                 <h4>BONUS #1</h4>
@@ -589,7 +696,6 @@
                 <p>Detox, cleanse and flush your organs with a "Bariatric Seed" to balance your hormones in just 24 hours, helping deflate fat cells 322% faster and boosts metabolism using a everyday orange-colored fruit that you may have in your kitchen.</p>
             </div>
 
-            <!-- Bônus 2 -->
             <div class="bonus-card">
                 <img src="foto_bonus_2.png" alt="Zero Sagging">
                 <h4>BONUS #2</h4>
@@ -597,21 +703,18 @@
                 <p>A simple at home ritual using Apple Cider Vinegar used by top models, singers and celebrities to keep their skin firm, smooth, and youthful, even as they age, plus boosting collagen production reducing wrinkles and fine lines, making you feel younger right after usage.</p>
             </div>
 
-            <!-- Bônus 3 -->
             <div class="bonus-card">
                 <img src="foto_bonus_3.png" alt="Wild Libido">
                 <h4>BONUS #3</h4>
                 <h3>Wild Libido</h3>
                 <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- SEÇÃO: Harvard Scientific Discovery (Espaço ajustado) -->
+    <!-- SEÇÃO: Harvard Scientific Discovery -->
     <section class="scientific-section">
         <div class="scientific-container">
-            
             <div class="scientific-shipping-banner">
                 🚚 Every 6 Bottle Order Gets <span style="text-decoration: underline;">FREE Shipping</span> Too!<br>
                 <span style="font-size: 14px; font-weight: normal;">*96% Of Customers Order 6 Bottles (<strong style="text-decoration: underline;">Our Recommended Option</strong>)</span>
@@ -644,6 +747,79 @@
             <div class="scientific-reference">
                 Hotamisligil, G. S., et al. "Protective mechanism fails when obesity sets in." Cell Metabolism, 2008.<br>
                 https://news.harvard.edu/gazette/story/2008/06/protective-mechanism-fails/
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Depoimentos de Usuários Reais -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-main-title">Real Mounjaboost Users.<br><span>Real Life-Changing Results.</span></h2>
+
+            <!-- Depoimento 1: Sophie -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="avatar_sophie.jpg" alt="Sophie" class="testimonial-avatar">
+                    <div class="testimonial-user-info">
+                        <h3>Sophie is 35 lbs lighter...</h3>
+                        <div>
+                            <span class="stars">★★★★★</span>
+                            <span class="verified-text">Verified Purchase</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"I always felt self-conscious about my appearance, especially in social situations. Since trying MounjaBoost, I've lost 35 pounds, and for the first time in years, I actually enjoy looking in the mirror. It's incredible how this change has boosted my confidence and made me feel like myself again!"</p>
+                <div class="testimonial-footer-info">
+                    <img src="caminho_da_foto_6_frascos.webp" alt="6 Bottles Package" class="testimonial-product-thumb">
+                    <div class="testimonial-author-details">
+                        <strong>Sophie R.</strong> - Austin, TX<br>
+                        Purchased Mounjaboost 6 Bottles Package
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 2: Daniel -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="avatar_daniel.jpg" alt="Daniel" class="testimonial-avatar">
+                    <div class="testimonial-user-info">
+                        <h3>Daniel has torched 29 lbs...</h3>
+                        <div>
+                            <span class="stars">★★★★★</span>
+                            <span class="verified-text">Verified Purchase</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"No matter what I tried, my weight just wouldn't budge, especially around my belly. MounjaBoost kick-started my metabolism and finally helped me shed 29 stubborn pounds. I feel lighter and more energetic, and my clothes are fitting so much better now – it's a huge relief."</p>
+                <div class="testimonial-footer-info">
+                    <img src="caminho_da_foto_3_frascos.png" alt="3 Bottles Package" class="testimonial-product-thumb">
+                    <div class="testimonial-author-details">
+                        <strong>Daniel M.</strong> - Orlando, FL<br>
+                        Purchased Mounjaboost 3 Bottles Package
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 3: Rachel -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="avatar_rachel.jpg" alt="Rachel" class="testimonial-avatar">
+                    <div class="testimonial-user-info">
+                        <h3>Rachel's dropped 40 lbs...</h3>
+                        <div>
+                            <span class="stars">★★★★★</span>
+                            <span class="verified-text">Verified Purchase</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Being overweight made even basic activities exhausting. I could hardly play with my kids without feeling out of breath. After using MounjaBoost, I've dropped 40 pounds, and I can keep up with my kids without feeling tired all the time. I have my energy and freedom back!"</p>
+                <div class="testimonial-footer-info">
+                    <img src="caminho_da_foto_6_frascos.webp" alt="6 Bottles Package" class="testimonial-product-thumb">
+                    <div class="testimonial-author-details">
+                        <strong>Rachel T.</strong> - Denver, CO<br>
+                        Purchased Mounjaboost 6 Bottles Package
+                    </div>
+                </div>
             </div>
 
         </div>
