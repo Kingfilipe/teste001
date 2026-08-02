@@ -91,12 +91,112 @@
             letter-spacing: 0.5px;
         }
 
-        /* Seção de Free Bonuses */
+        /* Seção de Preços (Cards dos Frascos) Logo Abaixo do Banner */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 0 20px 50px 20px;
+        }
+
+        .pricing-card {
+            background-color: #ffffff;
+            color: #333333;
+            width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #dcdcdc;
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #1a2b35;
+            background-color: #FFFFE0;
+            transform: scale(1.04);
+            z-index: 1;
+        }
+
+        .card-header {
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .header-basic { background-color: #607d8b; color: white; }
+        .header-popular { background-color: #1a2b35; color: white; }
+        .header-bundle { background-color: #26a69a; color: white; }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .package-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222222;
+            margin-bottom: 4px;
+        }
+
+        .supply-text {
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 15px;
+        }
+
+        .product-image {
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .main-price {
+            font-size: 46px;
+            font-weight: bold;
+            color: #d85a2f;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card.popular .main-price {
+            color: #e69500;
+        }
+
+        .per-bottle {
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .buy-now-btn {
+            background: linear-gradient(to bottom, #ffeb3b 0%, #fbc02d 100%);
+            color: #0c222d;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #b79400;
+            display: block;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        /* Seção de Free Bonuses (Abaixo dos Preços) */
         .bonuses-section {
-            padding: 20px 20px 50px 20px;
+            padding: 30px 20px 60px 20px;
             background-color: #081b22;
             max-width: 1000px;
             margin: 0 auto;
+            border-top: 1px solid #184152;
         }
 
         .bonuses-title {
@@ -201,105 +301,6 @@
             text-align: left;
         }
 
-        /* Seção de Preços (Cards) */
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 20px 20px 60px 20px;
-        }
-
-        .pricing-card {
-            background-color: #ffffff;
-            color: #333333;
-            width: 280px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid #dcdcdc;
-        }
-
-        .pricing-card.popular {
-            border: 2px solid #1a2b35;
-            background-color: #FFFFE0;
-            transform: scale(1.04);
-            z-index: 1;
-        }
-
-        .card-header {
-            padding: 10px;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-
-        .header-basic { background-color: #607d8b; color: white; }
-        .header-popular { background-color: #1a2b35; color: white; }
-        .header-bundle { background-color: #26a69a; color: white; }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .package-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #222222;
-            margin-bottom: 4px;
-        }
-
-        .supply-text {
-            font-size: 13px;
-            color: #666666;
-            margin-bottom: 15px;
-        }
-
-        .product-image {
-            height: 110px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-
-        .main-price {
-            font-size: 46px;
-            font-weight: bold;
-            color: #d85a2f;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .pricing-card.popular .main-price {
-            color: #e69500;
-        }
-
-        .per-bottle {
-            font-size: 13px;
-            color: #333333;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .buy-now-btn {
-            background: linear-gradient(to bottom, #ffeb3b 0%, #fbc02d 100%);
-            color: #0c222d;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 2px 0 #b79400;
-            display: block;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
         .guarantee-section {
             background-color: #ffffff;
             color: #333333;
@@ -349,50 +350,7 @@
         Claim Your Discounted Mounjaboost Below For Huge Savings
     </div>
 
-    <!-- Seção de Free Bonuses -->
-    <section id="bonuses" class="bonuses-section">
-        <h2 class="bonuses-title">Order <span style="color:#ffc107;">6 Bottles</span> or <span style="color:#ffc107;">3 Bottles</span><br>and Get a <span style="color:#ffc107;">Free Master Bonus!</span></h2>
-        <p class="bonuses-subtitle">Access to a mobile app where you will fill your age, heigh, weight and more details to get a personalized program of how to use Mounjaboost in your right proportions to get the best results. After completing your purchase, access details for the app will be sent directly to your registered email.</p>
-        
-        <!-- Destaque Slim App -->
-        <div class="special-bonus-container">
-            <div class="special-bonus-label">SPECIAL BONUS:<br>SLIM APP</div>
-            <img src="foto_app.png" alt="Slim App" class="app-mockup">
-        </div>
-
-        <p class="bonuses-intro-text">Plus, inside SlimApp You'll fing 3 special bonuses to increase your fat-burning process with simple tips for your daily routine:</p>
-
-        <!-- Grade com os 3 Bônus -->
-        <div class="bonuses-grid">
-            
-            <!-- Bônus 1 -->
-            <div class="bonus-card">
-                <img src="foto_bonus_1.png" alt="24-Hour Gut Detox">
-                <h4>BONUS #1</h4>
-                <h3>24-Gut Detox</h3>
-                <p>Detox, cleanse and flush your organs with a "Bariatric Seed" to balance your hormones in just 24 hours, helping deflate fat cells 322% faster and boosts metabolism using a everyday orange-colored fruit that you may have in your kitchen.</p>
-            </div>
-
-            <!-- Bônus 2 -->
-            <div class="bonus-card">
-                <img src="foto_bonus_2.png" alt="Zero Sagging">
-                <h4>BONUS #2</h4>
-                <h3>Zero Sagging</h3>
-                <p>A simple at home ritual using Apple Cider Vinegar used by top models, singers and celebrities to keep their skin firm, smooth, and youthful, even as they age, plus boosting collagen production reducing wrinkles and fine lines, making you feel younger right after usage.</p>
-            </div>
-
-            <!-- Bônus 3 -->
-            <div class="bonus-card">
-                <img src="foto_bonus_3.png" alt="Wild Libido">
-                <h4>BONUS #3</h4>
-                <h3>Wild Libido</h3>
-                <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Cards de Preços -->
+    <!-- Cards de Preços (Frascos) Logo Abaixo do Banner -->
     <div class="pricing-container">
         
         <!-- 1 Frasco -->
@@ -435,6 +393,49 @@
         </div>
 
     </div>
+
+    <!-- Seção de Free Bonuses (Abaixo dos Frascos) -->
+    <section id="bonuses" class="bonuses-section">
+        <h2 class="bonuses-title">Order <span style="color:#ffc107;">6 Bottles</span> or <span style="color:#ffc107;">3 Bottles</span><br>and Get a <span style="color:#ffc107;">Free Master Bonus!</span></h2>
+        <p class="bonuses-subtitle">Access to a mobile app where you will fill your age, heigh, weight and more details to get a personalized program of how to use Mounjaboost in your right proportions to get the best results. After completing your purchase, access details for the app will be sent directly to your registered email.</p>
+        
+        <!-- Destaque Slim App -->
+        <div class="special-bonus-container">
+            <div class="special-bonus-label">SPECIAL BONUS:<br>SLIM APP</div>
+            <img src="foto_app.png" alt="Slim App" class="app-mockup">
+        </div>
+
+        <p class="bonuses-intro-text">Plus, inside SlimApp You'll fing 3 special bonuses to increase your fat-burning process with simple tips for your daily routine:</p>
+
+        <!-- Grade com os 3 Bônus -->
+        <div class="bonuses-grid">
+            
+            <!-- Bônus 1 -->
+            <div class="bonus-card">
+                <img src="foto_bonus_1.png" alt="24-Hour Gut Detox">
+                <h4>BONUS #1</h4>
+                <h3>24-Gut Detox</h3>
+                <p>Detox, cleanse and flush your organs with a "Bariatric Seed" to balance your hormones in just 24 hours, helping deflate fat cells 322% faster and boosts metabolism using a everyday orange-colored fruit that you may have in your kitchen.</p>
+            </div>
+
+            <!-- Bônus 2 -->
+            <div class="bonus-card">
+                <img src="foto_bonus_2.png" alt="Zero Sagging">
+                <h4>BONUS #2</h4>
+                <h3>Zero Sagging</h3>
+                <p>A simple at home ritual using Apple Cider Vinegar used by top models, singers and celebrities to keep their skin firm, smooth, and youthful, even as they age, plus boosting collagen production reducing wrinkles and fine lines, making you feel younger right after usage.</p>
+            </div>
+
+            <!-- Bônus 3 -->
+            <div class="bonus-card">
+                <img src="foto_bonus_3.png" alt="Wild Libido">
+                <h4>BONUS #3</h4>
+                <h3>Wild Libido</h3>
+                <p>A homemade cocktail that will send your libido through the roof—so you can enjoy passionate nights with your husband again. Plus a 3-minute Thai Massage that will drive your man absolutely wild with desire.</p>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Seção de Garantia -->
     <section class="guarantee-section">
