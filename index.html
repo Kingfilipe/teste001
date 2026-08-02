@@ -52,7 +52,7 @@
 
         /* Seção do Título Centralizado */
         .hero-centered {
-            padding: 50px 20px;
+            padding: 40px 20px 20px 20px;
         }
 
         .hero-centered h1 {
@@ -65,6 +65,14 @@
         .hero-centered p {
             font-size: 16px;
             color: #e0e0e0;
+            margin-bottom: 25px;
+        }
+
+        /* Imagem do Frasco no Topo */
+        .hero-top-img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 30px;
         }
 
         /* Faixa Laranja de Chamada */
@@ -120,7 +128,7 @@
         .header-bundle { background-color: #26a69a; color: white; }
 
         .card-body {
-            padding: 25px 20px;
+            padding: 20px;
         }
 
         .package-title {
@@ -133,7 +141,14 @@
         .supply-text {
             font-size: 13px;
             color: #666666;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Imagens dos Produtos nos Cards */
+        .product-image {
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: 10px;
         }
 
         .main-price {
@@ -151,7 +166,7 @@
         .per-bottle {
             font-size: 13px;
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: bold;
         }
 
@@ -216,10 +231,11 @@
         <a href="#" class="order-btn-top">Order Now</a>
     </header>
 
-    <!-- Título Centralizado -->
+    <!-- Título Centralizado e Imagem do Topo -->
     <section class="hero-centered">
         <h1>Unleash Your Metabolic Potential</h1>
         <p>Boost Calorie Burning & Feel Amazing with MounjaBoost.</p>
+        <img src="foto_frasco_topo.webp" alt="MounjaBoost Bottle" class="hero-top-img">
     </section>
 
     <!-- Faixa Laranja -->
@@ -236,18 +252,20 @@
             <div class="card-body">
                 <div class="package-title">1 BOTTLE</div>
                 <div class="supply-text">30 Day Supply</div>
+                <img src="caminho_da_foto_1_frasco.webp" alt="1 Bottle" class="product-image">
                 <div class="main-price">$69</div>
-                <div style="height: 28px;"></div> <!-- Espaçador para alinhar com os outros -->
+                <div style="height: 28px;"></div> <!-- Espaçador -->
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
             </div>
         </div>
 
-        <!-- 6 Frascos (Mais Popular) -->
+        <!-- 6 Frascos (Mais Popular - PNG) -->
         <div class="pricing-card popular">
             <div class="card-header header-popular">MOST POPULAR</div>
             <div class="card-body">
                 <div class="package-title">6 BOTTLES</div>
                 <div class="supply-text">180 Day Supply</div>
+                <img src="caminho_da_foto_6_frascos.png" alt="6 Bottles" class="product-image">
                 <div class="main-price">$294</div>
                 <div class="per-bottle">($49 per bottle)</div>
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
@@ -260,6 +278,7 @@
             <div class="card-body">
                 <div class="package-title">3 BOTTLES</div>
                 <div class="supply-text">90 Day Supply</div>
+                <img src="caminho_da_foto_3_frascos.webp" alt="3 Bottles" class="product-image">
                 <div class="main-price">$177</div>
                 <div class="per-bottle">($59 per bottle)</div>
                 <a href="SEU_LINK_DE_AFILIADO" class="buy-now-btn">BUY NOW</a>
