@@ -16,20 +16,37 @@
             color: #1e293b;
             line-height: 1.6;
         }
-        /* Top bar com a logo PNG */
+        /* Top bar com o ícone e o texto ao lado */
         .top-bar {
             background-color: #ffffff;
-            color: #0b4f58;
             padding: 15px 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
             margin-bottom: 40px;
         }
-        .logo-img {
-            max-height: 55px;
-            width: auto;
-            display: inline-block;
+        .brand-container {
+            display: inline-flex;
+            align-items: center;
+            text-align: left;
+            gap: 12px;
         }
+        .logo-img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+        .brand-text .brand-title {
+            font-size: 1.35rem;
+            font-weight: bold;
+            color: #0b4f58;
+            line-height: 1.2;
+        }
+        .brand-text .brand-subtitle {
+            font-size: 0.85rem;
+            color: #0b4f58;
+            font-weight: 500;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -200,8 +217,14 @@
 <body>
 
     <div class="top-bar">
-        <!-- Certifique-se de que o ficheiro se chama 'logo.png' ou altere o nome abaixo -->
-        <img src="logo.png" alt="Mfl.Academy Logo" class="logo-img">
+        <div class="brand-container">
+            <!-- Certifique-se de que o ficheiro do ícone se chama 'logo.png' -->
+            <img src="logo.png" alt="Logo Icon" class="logo-img">
+            <div class="brand-text">
+                <div class="brand-title">MfL.Academy:</div>
+                <div class="brand-subtitle">Shaping a Career through Education</div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
