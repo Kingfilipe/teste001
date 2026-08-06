@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garanta Sua Vaga | Oferta Exclusiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #22c55e;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+            margin-bottom: 40px;
+        }
+        .cta-button:hover {
+            background-color: #16a34a;
+        }
+        .benefits {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .benefits h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .benefits ul {
+            list-style: none;
+        }
+        .benefits li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #cbd5e1;
+        }
+        .benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: bold;
+        }
+        .guarantee {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. TOPO / HERO SECTION -->
+        <h1>Transforme Seus Resultados com o Método Comprovado</h1>
+        <p>Aprende o caminho direto, sem enrolação, para alcançar seus objetivos de forma rápida e prática.</p>
+        
+        <a href="https://mfl.academy/?dig=607649#aff=Luizfilipe007" class="cta-button" target="_blank" rel="noopener noreferrer">QUERO GARANTIR MINHA VAGA AGORA</a>
+
+        <!-- 2. BENEFÍCIOS PRINCIPAIS -->
+        <div class="benefits">
+            <h2>O que você vai receber:</h2>
+            <ul>
+                <li>Acesso imediato a todo o conteúdo estratégico.</li>
+                <li>Passo a passo direto ao ponto, focado em conversão.</li>
+                <li>Suporte dedicado para tirar todas as suas dúvidas.</li>
+                <li>Atualizações constantes sem custo adicional.</li>
+            </ul>
+        </div>
+
+        <!-- 3. CHAMADA FINAL E GARANTIA -->
+        <a href="https://mfl.academy/?dig=607649#aff=Luizfilipe007" class="cta-button" target="_blank" rel="noopener noreferrer">GARANTIR MEU ACESSO</a>
+        <p class="guarantee">🔒 Compra 100% segura. Garantia incondicional de 7 dias.</p>
+    </div>
+
+</body>
+</html>
