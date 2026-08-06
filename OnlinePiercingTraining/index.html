@@ -16,15 +16,19 @@
             color: #1e293b;
             line-height: 1.6;
         }
-        /* Top bar visual da Mfl.Academy */
+        /* Top bar com a logo PNG */
         .top-bar {
-            background-color: #0b4f58;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #0b4f58;
             padding: 15px 20px;
             text-align: center;
-            font-weight: bold;
-            font-size: 1.1rem;
+            border-bottom: 1px solid #e2e8f0;
             margin-bottom: 40px;
+        }
+        .logo-img {
+            max-height: 55px;
+            width: auto;
+            display: inline-block;
         }
         .container {
             max-width: 1200px;
@@ -86,7 +90,7 @@
             background-color: #083c44;
         }
         
-        /* ESTRUTURA DE 4 EM CIMA E 3 EMBAIXO */
+        /* 4 EM CIMA E 3 EMBAIXO */
         .modules-grid-top {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -196,7 +200,8 @@
 <body>
 
     <div class="top-bar">
-        MfL.Academy: Shaping a Career through Education
+        <!-- Certifique-se de que o ficheiro se chama 'logo.png' ou altere o nome abaixo -->
+        <img src="logo.png" alt="Mfl.Academy Logo" class="logo-img">
     </div>
 
     <div class="container">
