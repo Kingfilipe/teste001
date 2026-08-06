@@ -104,7 +104,7 @@
             margin-bottom: 0;
         }
 
-        /* Grade com 4 colunas exatas como no site original */
+        /* Grade com 4 colunas */
         .modules-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -212,7 +212,7 @@
             text-align: center;
         }
 
-        /* Estilo dos Feedbacks */
+        /* Estilo dos Feedbacks com Estrelas Amarelas (Sem fotos) */
         .testimonials-section {
             margin: 50px 0;
             text-align: center;
@@ -259,51 +259,27 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
             text-align: left;
+        }
+        .testimonial-stars {
+            color: #f59e0b; /* Amarelo ouro */
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
         }
         .testimonial-text {
             font-size: 0.88rem;
             color: #475569;
             line-height: 1.5;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .testimonial-author-box {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            position: relative;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
             margin-top: auto;
         }
-        .testimonial-card::after {
-            content: "";
-            position: absolute;
-            bottom: 60px;
-            left: 35px;
-            border-width: 8px 8px 0;
-            border-style: solid;
-            border-color: #ffffff transparent;
-            display: block;
-            width: 0;
-        }
-        .testimonial-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: #cbd5e1;
-            flex-shrink: 0;
-            border: 2px solid #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .testimonial-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
         .author-info .author-name {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: bold;
             color: #1e293b;
             line-height: 1.2;
@@ -493,7 +469,7 @@
                 <p>Our experienced team of long-standing instructors and professional piercers will accompany you on your way.</p>
             </div>
 
-            <!-- Grade com exatamente 4 colunas -->
+            <!-- Grade com 4 colunas -->
             <div class="modules-grid">
                 <!-- Módulo 1 -->
                 <div class="module-card">
@@ -566,22 +542,21 @@
                 </div>
             </div>
 
-            <!-- Seção de Feedbacks com imagens embutidas (Base64) idênticas ao original -->
+            <!-- Seção de Depoimentos com Estrelas Amarelas (Sem fotos) -->
             <div class="testimonials-section">
                 <div class="testimonials-title">Feedback and experiences on the Piercing Masterclass course</div>
                 <div class="testimonials-subtitle">Wall of Confirmation: what the participants say</div>
                 
                 <div class="testimonials-grid">
-                    <!-- Feedback 1 (M. May) -->
+                    <!-- Feedback 1 -->
                     <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            I learned a lot from this course. The structure of the individual learning fields was very clear. You could learn at your own pace and make your own notes. Another advantage was that you could order a practice set to practise the...
+                        <div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="testimonial-text">
+                                I learned a lot from this course. The structure of the individual learning fields was very clear. You could learn at your own pace and make your own notes. Another advantage was that you could order a practice set to practise the...
+                            </div>
                         </div>
                         <div class="testimonial-author-box">
-                            <div class="testimonial-avatar">
-                                <!-- Avatar cinza neutro original do M. May -->
-                                <svg viewBox="0 0 24 24" width="44" height="44"><circle cx="12" cy="12" r="12" fill="#cbd5e1"/><path d="M12 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#64748b"/></svg>
-                            </div>
                             <div class="author-info">
                                 <div class="author-name">M. May</div>
                                 <div class="author-role">Participant</div>
@@ -589,16 +564,15 @@
                         </div>
                     </div>
 
-                    <!-- Feedback 2 (P. Rost) -->
+                    <!-- Feedback 2 -->
                     <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            I really enjoyed the course and was delighted to have passed it
+                        <div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="testimonial-text">
+                                I really enjoyed the course and was delighted to have passed it
+                            </div>
                         </div>
                         <div class="testimonial-author-box">
-                            <div class="testimonial-avatar">
-                                <!-- Imagem real embutida para P. Rost -->
-                                <svg viewBox="0 0 100 100" width="44" height="44"><circle cx="50" cy="50" r="50" fill="#3b82f6"/><text x="50" y="58" font-size="40" font-weight="bold" fill="#ffffff" text-anchor="middle">PR</text></svg>
-                            </div>
                             <div class="author-info">
                                 <div class="author-name">P. Rost</div>
                                 <div class="author-role">Participant</div>
@@ -606,16 +580,15 @@
                         </div>
                     </div>
 
-                    <!-- Feedback 3 (L. Count) -->
+                    <!-- Feedback 3 -->
                     <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            It was a great experience, you were able to learn really well without pressure, everything is well explained and you are taken by the hand if you have any questions.
+                        <div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="testimonial-text">
+                                It was a great experience, you were able to learn really well without pressure, everything is well explained and you are taken by the hand if you have any questions.
+                            </div>
                         </div>
                         <div class="testimonial-author-box">
-                            <div class="testimonial-avatar">
-                                <!-- Imagem real embutida para L. Count -->
-                                <svg viewBox="0 0 100 100" width="44" height="44"><circle cx="50" cy="50" r="50" fill="#475569"/><text x="50" y="58" font-size="40" font-weight="bold" fill="#ffffff" text-anchor="middle">LC</text></svg>
-                            </div>
                             <div class="author-info">
                                 <div class="author-name">L. Count</div>
                                 <div class="author-role">Participant</div>
