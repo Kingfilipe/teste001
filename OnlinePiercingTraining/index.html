@@ -16,7 +16,6 @@
             color: #1e293b;
             line-height: 1.6;
         }
-        /* Top bar com a logo maior */
         .top-bar {
             background-color: #ffffff;
             padding: 18px 20px;
@@ -31,7 +30,7 @@
             gap: 14px;
         }
         .logo-img {
-            max-height: 55px; /* Logo maior como pedido */
+            max-height: 55px;
             width: auto;
             display: block;
         }
@@ -47,7 +46,6 @@
             font-weight: 500;
         }
 
-        /* Layout Principal Mais Largo */
         .page-wrapper {
             max-width: 1320px;
             margin: 0 auto;
@@ -67,7 +65,6 @@
             text-align: left;
         }
 
-        /* Texto em vermelho centralizado no topo */
         .top-banner-text {
             color: #dc2626;
             font-weight: bold;
@@ -107,48 +104,38 @@
             margin-bottom: 0;
         }
 
-        /* Grid de imagens dos módulos (como no seu layout original) */
-        .modules-grid {
+        /* Estrutura de Grades para as 7 imagens WebP (4 em cima, 3 embaixo) */
+        .image-grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin: 30px 0;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .image-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
         }
         @media (max-width: 900px) {
-            .modules-grid {
+            .image-grid-4, .image-grid-3 {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        .module-card {
+        .img-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            display: flex;
-            flex-direction: column;
+            text-align: center;
+            padding: 10px;
         }
-        .module-card img {
+        .img-card img {
             width: 100%;
-            height: 140px;
-            object-fit: cover;
-        }
-        .module-card-body {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .module-card h3 {
-            font-size: 0.95rem;
-            color: #0b4f58;
-            margin-bottom: 8px;
-        }
-        .module-card p {
-            font-size: 0.8rem;
-            color: #64748b;
-            line-height: 1.4;
+            height: auto;
+            border-radius: 4px;
+            display: block;
         }
 
         .section-box {
@@ -192,7 +179,7 @@
             text-align: center;
         }
 
-        /* Sidebar Flutuante */
+        /* Sidebar */
         .sidebar {
             position: sticky;
             top: 20px;
@@ -281,7 +268,7 @@
             flex-shrink: 0;
         }
 
-        /* Rodapé Legal para Google Ads */
+        /* Rodapé Legal */
         footer {
             background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
@@ -310,7 +297,6 @@
 </head>
 <body>
 
-    <!-- Top Bar com Logo -->
     <div class="top-bar">
         <div class="brand-container">
             <img src="logo.png" alt="MfL Academy Logo" class="logo-img">
@@ -322,9 +308,7 @@
     </div>
 
     <div class="page-wrapper">
-        <!-- Conteúdo Principal da Esquerda -->
         <div class="main-content">
-            <!-- Texto em Vermelho Centralizado no Topo -->
             <div class="top-banner-text">
                 Start your career as a piercer – professionally, fairly and without detours.
             </div>
@@ -338,39 +322,21 @@
                 <p>Our aim is for you to learn professional piercing at the highest level - without having to spend months searching for reliable knowledge or committing to a specific tattoo & piercing studio in the long term.</p>
             </div>
 
-            <!-- Grid de Módulos com Imagens (Mantido como no original) -->
-            <div class="modules-grid">
-                <div class="module-card">
-                    <img src="modulo1.jpg" alt="Specialist knowledge">
-                    <div class="module-card-body">
-                        <h3>1. Specialist knowledge</h3>
-                        <p>Introduction to professional piercing materials and skin layers.</p>
-                    </div>
-                </div>
-                <div class="module-card">
-                    <img src="modulo2.jpg" alt="Hygiene training">
-                    <div class="module-card-body">
-                        <h3>2. Hygiene training</h3>
-                        <p>Certified training according to hygiene acts for studio environments.</p>
-                    </div>
-                </div>
-                <div class="module-card">
-                    <img src="modulo3.jpg" alt="Anatomy">
-                    <div class="module-card-body">
-                        <h3>3. Anatomy</h3>
-                        <p>Understand skin structures, nerve pathways, and blood vessels.</p>
-                    </div>
-                </div>
-                <div class="module-card">
-                    <img src="modulo4.jpg" alt="Instruments">
-                    <div class="module-card-body">
-                        <h3>4. Instruments</h3>
-                        <p>Needle technology, materials, and punch applications.</p>
-                    </div>
-                </div>
+            <!-- 4 Imagens WebP na Primeira Linha -->
+            <div class="image-grid-4">
+                <div class="img-card"><img src="imagem1.webp" alt="Piercing Course Module 1"></div>
+                <div class="img-card"><img src="imagem2.webp" alt="Piercing Course Module 2"></div>
+                <div class="img-card"><img src="imagem3.webp" alt="Piercing Course Module 3"></div>
+                <div class="img-card"><img src="imagem4.webp" alt="Piercing Course Module 4"></div>
             </div>
 
-            <!-- O que você aprende -->
+            <!-- 3 Imagens WebP na Segunda Linha -->
+            <div class="image-grid-3">
+                <div class="img-card"><img src="imagem5.webp" alt="Piercing Course Module 5"></div>
+                <div class="img-card"><img src="imagem6.webp" alt="Piercing Course Module 6"></div>
+                <div class="img-card"><img src="imagem7.webp" alt="Piercing Course Module 7"></div>
+            </div>
+
             <div class="section-box">
                 <h2>What you learn in the piercing training course:</h2>
                 <ul>
@@ -382,7 +348,6 @@
                 </ul>
             </div>
 
-            <!-- Para quem é -->
             <div class="section-box">
                 <h2>Who this course is made for:</h2>
                 <ul>
@@ -396,7 +361,6 @@
                 <p>Our experienced team of long-standing instructors and professional piercers will accompany you on your way.</p>
             </div>
 
-            <!-- Garantia / Teste de 14 dias -->
             <div class="guarantee">
                 <p style="color: #0b4f58; font-weight: bold; margin-bottom: 8px;">Still unsure whether piercing is right for you?</p>
                 <p style="color: #1e293b; font-weight: 600; margin-bottom: 8px;">Find out - try our free piercing course now!</p>
@@ -410,7 +374,6 @@
             </div>
         </div>
 
-        <!-- Coluna da Direita (Sidebar do Preço) -->
         <div class="sidebar">
             <div class="sidebar-card">
                 <div class="sidebar-header">
@@ -466,7 +429,6 @@
         </div>
     </div>
 
-    <!-- Rodapé Legal Obrigatório para Google Ads -->
     <footer>
         <div class="footer-links">
             <a href="#terms">Terms of Use</a>
