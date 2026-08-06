@@ -16,7 +16,7 @@
             color: #1e293b;
             line-height: 1.6;
         }
-        /* Top bar com o ícone e o texto ao lado */
+        /* Top bar com o ícone e o nome */
         .top-bar {
             background-color: #ffffff;
             padding: 15px 20px;
@@ -47,11 +47,24 @@
             font-weight: 500;
         }
 
-        .container {
-            max-width: 1200px;
+        /* LAYOUT DE DUAS COLUNAS (CONTEÚDO + SIDEBAR) */
+        .page-wrapper {
+            max-width: 1240px;
             margin: 0 auto;
             padding: 0 20px 60px 20px;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 40px;
+            align-items: start;
+        }
+        @media (max-width: 1024px) {
+            .page-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            text-align: left;
         }
         h1 {
             font-size: 2.2rem;
@@ -69,12 +82,8 @@
             padding: 30px;
             border-radius: 8px;
             margin-bottom: 30px;
-            text-align: left;
             border: 1px solid #e2e8f0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .intro-box p {
             color: #475569;
@@ -84,46 +93,84 @@
         .intro-box p:last-child {
             margin-bottom: 0;
         }
-        .price-tag {
-            font-size: 2.5rem;
-            color: #0b4f58;
-            font-weight: bold;
-            margin: 20px 0;
+        
+        /* SIDEBAR DE COMPRA (CARRINHO À DIREITA) */
+        .sidebar-card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            overflow: hidden;
+            position: sticky;
+            top: 20px;
         }
-        .cta-button {
-            display: inline-block;
+        .sidebar-header {
+            background-color: #0b4f58;
+            padding: 25px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .sidebar-icon {
+            width: 75px;
+            height: 75px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: #0b4f58;
+            font-size: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .sidebar-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+        .sidebar-button {
+            display: block;
             background-color: #0b4f58;
             color: #ffffff;
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             font-weight: bold;
-            padding: 16px 35px;
+            padding: 15px 20px;
             border-radius: 6px;
             text-decoration: none;
             transition: background-color 0.2s;
             box-shadow: 0 4px 10px rgba(11, 79, 88, 0.2);
-            margin: 15px 0 35px 0;
+            text-align: center;
+            margin-bottom: 25px;
         }
-        .cta-button:hover {
+        .sidebar-button:hover {
             background-color: #083c44;
         }
-        
-        /* 4 EM CIMA E 3 EMBAIXO */
+        .sidebar-features {
+            padding: 0 20px 25px 20px;
+            list-style: none;
+        }
+        .sidebar-features li {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        /* 4 EM CIMA E 3 EMBAIXO PARA OS MÓDULOS */
         .modules-grid-top {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-bottom: 20px;
-            text-align: left;
         }
         .modules-grid-bottom {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-bottom: 40px;
-            text-align: left;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
         @media (max-width: 1024px) {
             .modules-grid-top, .modules-grid-bottom {
@@ -147,7 +194,7 @@
         }
         .module-card img {
             width: 100%;
-            height: 160px;
+            height: 140px;
             object-fit: cover;
             display: block;
         }
@@ -159,12 +206,12 @@
             justify-content: space-between;
         }
         .module-content h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #0b4f58;
             margin-bottom: 8px;
         }
         .module-content p {
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             color: #64748b;
         }
 
@@ -172,9 +219,7 @@
             background: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            text-align: left;
-            margin: 30px auto;
-            max-width: 900px;
+            margin: 30px 0;
             border: 1px solid #e2e8f0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
@@ -182,7 +227,6 @@
             font-size: 1.3rem;
             margin-bottom: 20px;
             color: #0b4f58;
-            text-align: center;
         }
         .section-box ul {
             list-style: none;
@@ -206,11 +250,10 @@
             background: #ffffff;
             padding: 25px;
             border-radius: 8px;
-            margin: 30px auto;
-            max-width: 900px;
-            text-align: center;
+            margin: 30px 0;
             border: 1px solid #e2e8f0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
         }
     </style>
 </head>
@@ -218,7 +261,6 @@
 
     <div class="top-bar">
         <div class="brand-container">
-            <!-- Certifique-se de que o ficheiro do ícone se chama 'logo.png' -->
             <img src="logo.png" alt="Logo Icon" class="logo-img">
             <div class="brand-text">
                 <div class="brand-title">MfL.Academy:</div>
@@ -227,131 +269,152 @@
         </div>
     </div>
 
-    <div class="container">
-        <!-- HERO -->
-        <p style="color: #dc2626; font-weight: bold; margin-bottom: 10px;">Start your journey as a piercer – professionally, fairly and without detours.</p>
-        <h1>Online piercing course: Learn to pierce - with a certificate!</h1>
-        <div class="subtitle">In this Piercing Masterclass online course, you will learn in 169 easy-to-understand lessons:</div>
+    <div class="page-wrapper">
+        <!-- COLUNA DA ESQUERDA (CONTEÚDO PRINCIPAL) -->
+        <div class="main-content">
+            <p style="color: #dc2626; font-weight: bold; margin-bottom: 10px;">Start your journey as a piercer – professionally, fairly and without detours.</p>
+            <h1>Online piercing course: Learn to pierce - with a certificate!</h1>
+            <div class="subtitle">In this Piercing Masterclass online course, you will learn in 169 easy-to-understand lessons:</div>
 
-        <div class="intro-box">
-            <p>This is where a perfect, glossy advertising text could go. But we don't want to push anything on you or entice you into a spontaneous purchase.</p>
-            <p>Our goal is for you to learn professional piercing at the highest level – without having to search for reliable knowledge for months or committing to a specific tattoo & piercing studio in the long term.</p>
+            <div class="intro-box">
+                <p>This is where a perfect, glossy advertising text could go. But we don't want to push anything on you or entice you into a spontaneous purchase.</p>
+                <p>Our goal is for you to learn professional piercing at the highest level – without having to search for reliable knowledge for months or committing to a specific tattoo & piercing studio in the long term.</p>
+            </div>
+
+            <!-- 4 MÓDULOS EM CIMA -->
+            <div class="modules-grid-top">
+                <div class="module-card">
+                    <img src="aula-1.webp" alt="Specialist and professional knowledge">
+                    <div class="module-content">
+                        <div>
+                            <h3>1. Specialist knowledge</h3>
+                            <p>Introduction to professional piercing materials and skin layers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <img src="aula-2.webp" alt="Specialist hygiene training">
+                    <div class="module-content">
+                        <div>
+                            <h3>2. Hygiene training</h3>
+                            <p>Certified training according to hygiene acts for studio environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <img src="aula-3.webp" alt="Anatomy and Dermatology">
+                    <div class="module-content">
+                        <div>
+                            <h3>3. Anatomy</h3>
+                            <p>Understand skin structures, nerve pathways, and blood vessels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <img src="aula-4.webp" alt="Instrument knowledge">
+                    <div class="module-content">
+                        <div>
+                            <h3>4. Instruments</h3>
+                            <p>Needle technology, materials, and punch applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 MÓDULOS EMBAIXO -->
+            <div class="modules-grid-bottom">
+                <div class="module-card">
+                    <img src="aula-5.webp" alt="Piercing instructions">
+                    <div class="module-content">
+                        <div>
+                            <h3>5. Instructions A-Z</h3>
+                            <p>Over 50 detailed tutorials with needle and jewelry sizes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <img src="aula-6.webp" alt="Practical Implementation">
+                    <div class="module-content">
+                        <div>
+                            <h3>6. Practical Exercises</h3>
+                            <p>Structured workplace setup and needle techniques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <img src="aula-7.webp" alt="Studio setup and business">
+                    <div class="module-content">
+                        <div>
+                            <h3>7. Business & Studio</h3>
+                            <p>From client consultations to marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- O QUE VAI APRENDER -->
+            <div class="section-box">
+                <h2>What you will learn in the piercing training:</h2>
+                <ul>
+                    <li>Techniques and tricks of the pros</li>
+                    <li>Specialized hygiene, anatomy & risk areas</li>
+                    <li>Handling piercings and instruments</li>
+                    <li>Professional piercing of 50+ piercings</li>
+                    <li>Successfully launching your studio</li>
+                </ul>
+            </div>
+
+            <!-- PARA QUEM É -->
+            <div class="section-box">
+                <h2>Who this course is designed for:</h2>
+                <ul>
+                    <li>Are you a complete beginner and would like to discover piercing as a new career path?</li>
+                    <li>Do you already run a salon or beauty business and want to expand your services?</li>
+                    <li>Are you already working as a piercer and would like to further your education in a targeted way?</li>
+                </ul>
+            </div>
+
+            <!-- GARANTIA -->
+            <div class="guarantee">
+                <p style="color: #0b4f58; font-weight: bold; margin-bottom: 8px;">Still unsure whether piercing is right for you?</p>
+                <p style="color: #64748b; margin-bottom: 0;">Try out all the content at your leisure for 14 days – without obligation. No automatic renewal, no hidden costs.</p>
+            </div>
         </div>
 
-        <div class="price-tag">668.98 USD</div>
-
-        <a href="https://mfl.academy/?dig=607649#aff=Luizfilipe007" class="cta-button" target="_blank" rel="noopener noreferrer">START YOUR DISTANCE LEARNING NOW</a>
-
-        <!-- 4 MÓDULOS EM CIMA -->
-        <div class="modules-grid-top">
-            
-            <div class="module-card">
-                <img src="aula-1.webp" alt="Specialist and professional knowledge for piercers">
-                <div class="module-content">
-                    <div>
-                        <h3>1. Specialist and professional knowledge for piercers</h3>
-                        <p>A comprehensive introduction to professional piercing materials, skin layers, and legal aspects.</p>
+        <!-- COLUNA DA DIREITA (SIDEBAR DO CARRINHO IDÊNTICA AO ORIGINAL) -->
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <div class="sidebar-icon">
+                        🎓
                     </div>
                 </div>
-            </div>
-
-            <div class="module-card">
-                <img src="aula-2.webp" alt="Specialist hygiene training">
-                <div class="module-content">
-                    <div>
-                        <h3>2. Specialist hygiene training</h3>
-                        <p>Certified training according to hygiene acts for safe, professional work in a studio environment.</p>
-                    </div>
+                
+                <div style="padding: 20px; text-align: center;">
+                    <div class="sidebar-price">579 €</div>
+                    
+                    <a href="https://mfl.academy/?dig=607649#aff=Luizfilipe007" class="sidebar-button" target="_blank" rel="noopener noreferrer">
+                        🛒 One-off or installment payment up to 48 months
+                    </a>
                 </div>
-            </div>
 
-            <div class="module-card">
-                <img src="aula-3.webp" alt="Anatomy and Dermatology">
-                <div class="module-content">
-                    <div>
-                        <h3>3. Anatomy and Dermatology</h3>
-                        <p>Understand skin structures, nerve pathways, and blood vessels to perform precise piercings safely.</p>
-                    </div>
-                </div>
+                <ul class="sidebar-features">
+                    <li>⭐ 100% positive reviews (96)</li>
+                    <li>📑 169 lessons in 104.5 units</li>
+                    <li>✋ 19 practical exercises</li>
+                    <li>✏️ 112 exam questions</li>
+                    <li>▶️ 163 media and accompanying materials</li>
+                    <li>📊 Level: beginners and advanced</li>
+                    <li>📱 Available via app, tablet and PC</li>
+                    <li>🔒 60 days money back guarantee</li>
+                </ul>
             </div>
-
-            <div class="module-card">
-                <img src="aula-4.webp" alt="Instrument knowledge and techniques">
-                <div class="module-content">
-                    <div>
-                        <h3>4. Instrument knowledge and techniques</h3>
-                        <p>Needle technology, materials, punch applications, and in-depth tool knowledge from pliers to consumables.</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
-        <!-- 3 MÓDULOS EMBAIXO -->
-        <div class="modules-grid-bottom">
-            
-            <div class="module-card">
-                <img src="aula-5.webp" alt="Piercing instructions from A to Z">
-                <div class="module-content">
-                    <div>
-                        <h3>5. Piercing instructions from A to Z</h3>
-                        <p>Over 50 detailed and animated tutorials with needle and jewelry sizes, and healing phases.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <img src="aula-6.webp" alt="Practical Implementation and Exercises">
-                <div class="module-content">
-                    <div>
-                        <h3>6. Practical Implementation and Exercises</h3>
-                        <p>Structured workplace setup, needle and punch techniques, and tips from experienced piercers.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="module-card">
-                <img src="aula-7.webp" alt="Studio setup, business and marketing">
-                <div class="module-content">
-                    <div>
-                        <h3>7. Studio setup, business and marketing</h3>
-                        <p>From client consultations and business plans to insurance and marketing strategies.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- O QUE VAI APRENDER -->
-        <div class="section-box">
-            <h2>What you will learn in the piercing training:</h2>
-            <ul>
-                <li>Techniques and tricks of the pros</li>
-                <li>Specialized hygiene, anatomy & risk areas</li>
-                <li>Handling piercings and instruments</li>
-                <li>Professional piercing of 50+ piercings</li>
-                <li>Successfully launching your studio</li>
-            </ul>
-        </div>
-
-        <!-- PARA QUEM É -->
-        <div class="section-box">
-            <h2>Who this course is designed for:</h2>
-            <ul>
-                <li>Are you a complete beginner and would like to discover piercing as a new career path?</li>
-                <li>Do you already run a salon or beauty business and want to expand your services?</li>
-                <li>Are you already working as a piercer and would like to further your education in a targeted way?</li>
-            </ul>
-        </div>
-
-        <!-- GARANTIA / TESTE -->
-        <div class="guarantee">
-            <p style="color: #0b4f58; font-weight: bold; margin-bottom: 10px;">Still unsure whether piercing is right for you?</p>
-            <p style="color: #64748b; margin-bottom: 0;">Try out all the content at your leisure for 14 days – without obligation. No automatic renewal, no hidden costs. Access ends automatically after two weeks.</p>
-        </div>
-
-        <!-- FINAL CTA -->
-        <a href="https://mfl.academy/?dig=607649#aff=Luizfilipe007" class="cta-button" target="_blank" rel="noopener noreferrer">GET INSTANT ACCESS NOW</a>
     </div>
 
 </body>
