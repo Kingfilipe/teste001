@@ -104,32 +104,38 @@
             margin-bottom: 0;
         }
 
-        /* Grades de Módulos (Estilo Original) */
+        /* Grade com 4 colunas exatas como no site original */
         .modules-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             margin: 30px 0;
+        }
+        @media (max-width: 1200px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         @media (max-width: 768px) {
             .modules-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         .module-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            padding: 15px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
         }
         .module-img-container {
             position: relative;
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-radius: 6px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
@@ -141,27 +147,27 @@
         }
         .lesson-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background-color: rgba(15, 23, 42, 0.85);
             color: #ffffff;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: bold;
-            padding: 3px 8px;
+            padding: 2px 6px;
             border-radius: 4px;
             letter-spacing: 0.3px;
         }
         .module-title {
-            font-size: 1rem;
+            font-size: 0.92rem;
             font-weight: bold;
             color: #0b4f58;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-align: center;
         }
         .module-desc {
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             color: #475569;
-            line-height: 1.5;
+            line-height: 1.45;
             text-align: left;
         }
 
@@ -373,7 +379,7 @@
                 <p>Our experienced team of long-standing instructors and professional piercers will accompany you on your way.</p>
             </div>
 
-            <!-- Grade de Módulos Detalhados Exatamente Como no Site Original -->
+            <!-- Grade com exatamente 4 colunas (4 em cima, 3 embaixo) -->
             <div class="modules-grid">
                 <!-- Módulo 1 -->
                 <div class="module-card">
@@ -434,23 +440,19 @@
                     <div class="module-title">6. practical implementation and exercises</div>
                     <div class="module-desc">The leap from theory to practice: structured workplace set-up, specific exercises and recommendations for different types of piercing. The focus is on correct needle and punch guidance, optimum piercing lengths and valuable tips from our experienced piercers. With many practical exercises and illustrative examples, dexterity and confidence grow with every piercing procedure - always supported by our instructors.</div>
                 </div>
-            </div>
 
-            <!-- Módulo 7 centralizado ou em linha completa (Studio Foundation) -->
-            <div style="max-width: 100%; margin-bottom: 30px;">
-                <div class="module-card" style="flex-direction: row; gap: 20px; align-items: center; padding: 20px;">
-                    <div class="module-img-container" style="width: 45%; margin-bottom: 0; flex-shrink: 0;">
+                <!-- Módulo 7 -->
+                <div class="module-card">
+                    <div class="module-img-container">
                         <img src="aula-7.webp" alt="Studio foundation, business and marketing">
                         <div class="lesson-badge">11 lessons</div>
                     </div>
-                    <div style="width: 55%;">
-                        <div class="module-title" style="text-align: left;">7. studio foundation, business and marketing</div>
-                        <div class="module-desc">From the first customer meeting, successful sales pitches and aftercare strategies to your individual business plan and piercing insurance. It includes valuable tips and tricks from long-standing studio owners, as well as all the basics for your marketing and strategies for increasing sales. Perfect for anyone who wants to open their own piercing studio or take over a piercing business and establish themselves as ...</div>
-                    </div>
+                    <div class="module-title">7. studio foundation, business and marketing</div>
+                    <div class="module-desc">From the first customer meeting, successful sales pitches and aftercare strategies to your individual business plan and piercing insurance. It includes valuable tips and tricks from long-standing studio owners, as well as all the basics for your marketing and strategies for increasing sales. Perfect for anyone who wants to open their own piercing studio or take over a piercing business and establish themselves as ...</div>
                 </div>
             </div>
 
-            <!-- Seção de Vantagens Finais Estilo "Cards com Ícones Flutuantes" -->
+            <!-- Seção de Vantagens Finais -->
             <div style="margin: 50px 0 40px 0;">
                 <h3 style="text-align: center; color: #0b4f58; font-size: 1.6rem; margin-bottom: 10px;">Suitable for beginners and advanced users</h3>
                 <p style="text-align: center; color: #475569; font-size: 0.95rem; margin-bottom: 40px;">Even after you have completed your Piercing Masterclass training, we are there for you and will accompany you on your further journey.</p>
