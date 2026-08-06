@@ -104,38 +104,65 @@
             margin-bottom: 0;
         }
 
-        /* Grades de Imagens */
-        .image-grid-4 {
+        /* Grades de Módulos (Estilo Original) */
+        .modules-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin: 25px 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
         }
-        .image-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 25px 0;
-        }
-        @media (max-width: 900px) {
-            .image-grid-4, .image-grid-3 {
-                grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 768px) {
+            .modules-grid {
+                grid-template-columns: 1fr;
             }
         }
-        .img-card {
+        .module-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            text-align: center;
-            padding: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
         }
-        .img-card img {
+        .module-img-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .module-img-container img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
             display: block;
+        }
+        .lesson-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(15, 23, 42, 0.85);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.3px;
+        }
+        .module-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #0b4f58;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .module-desc {
+            font-size: 0.88rem;
+            color: #475569;
+            line-height: 1.5;
+            text-align: left;
         }
 
         .section-box {
@@ -346,19 +373,81 @@
                 <p>Our experienced team of long-standing instructors and professional piercers will accompany you on your way.</p>
             </div>
 
-            <!-- Primeiras 4 imagens das aulas (aula-1 a aula-4) -->
-            <div class="image-grid-4">
-                <div class="img-card"><img src="aula-1.webp" alt="Piercing Course Module 1"></div>
-                <div class="img-card"><img src="aula-2.webp" alt="Piercing Course Module 2"></div>
-                <div class="img-card"><img src="aula-3.webp" alt="Piercing Course Module 3"></div>
-                <div class="img-card"><img src="aula-4.webp" alt="Piercing Course Module 4"></div>
+            <!-- Grade de Módulos Detalhados Exatamente Como no Site Original -->
+            <div class="modules-grid">
+                <!-- Módulo 1 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-1.webp" alt="Specialist and professional knowledge for piercers">
+                        <div class="lesson-badge">28 lessons</div>
+                    </div>
+                    <div class="module-title">1. specialist and professional knowledge for piercers</div>
+                    <div class="module-desc">A comprehensive introduction to the world of professional piercing: from the most common materials (surgical steel 316L, titanium G23, niobium, PTFE and more) to basic specialist knowledge on skin layers and pain development to the legal situation. With tips on how to deal with wild meat, scar tissue...</div>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-2.webp" alt="Specialist hygiene training">
+                        <div class="lesson-badge">19 lessons</div>
+                    </div>
+                    <div class="module-title">2. specialist hygiene training</div>
+                    <div class="module-desc">Professionally certified training in accordance with § 2 & § 4 IfSG, based on the recommendations of the health authorities and GewO §94 Z 34 (AT). Teaches all hygiene-relevant procedures for safe, professional work in the piercing studio.</div>
+                </div>
+
+                <!-- Módulo 3 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-3.webp" alt="Anatomy and dermal science">
+                        <div class="lesson-badge">16 lessons</div>
+                    </div>
+                    <div class="module-title">3. anatomy and dermal science</div>
+                    <div class="module-desc">Immerse yourself in the world of human anatomy: understand the structure of the skin layers, the course of nerve tracts and blood vessels. This knowledge enables you to pierce safely and precisely, minimizes risks and increases customer satisfaction.</div>
+                </div>
+
+                <!-- Módulo 4 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-4.webp" alt="Instruments and techniques">
+                        <div class="lesson-badge">6 lessons</div>
+                    </div>
+                    <div class="module-title">4. instruments and techniques</div>
+                    <div class="module-desc">A look behind the scenes of professional studio equipment: the basics of needle technology and materials, areas of application for punch and needles as well as in-depth tool knowledge. From pliers to consumables, everything is covered so that every move is perfect and first-class results a...</div>
+                </div>
+
+                <!-- Módulo 5 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-5.webp" alt="Piercing instructions from A to Z">
+                        <div class="lesson-badge">57 lessons</div>
+                    </div>
+                    <div class="module-title">5. piercing instructions from A to Z</div>
+                    <div class="module-desc">A unique reference book with over 50 detailed and animated piercing instructions - from ampallang and navel to nasallang, industrial, nipple, surface and tongue. Each guide includes the appropriate needle and jewelry sizes, healing phases and special instructions. Whether classic ear and nose piercings, microdermals or sophisticated intimate piercings: the step-by-step explanations leave no questions unanswered.</div>
+                </div>
+
+                <!-- Módulo 6 -->
+                <div class="module-card">
+                    <div class="module-img-container">
+                        <img src="aula-6.webp" alt="Practical implementation and exercises">
+                        <div class="lesson-badge">32 lessons</div>
+                    </div>
+                    <div class="module-title">6. practical implementation and exercises</div>
+                    <div class="module-desc">The leap from theory to practice: structured workplace set-up, specific exercises and recommendations for different types of piercing. The focus is on correct needle and punch guidance, optimum piercing lengths and valuable tips from our experienced piercers. With many practical exercises and illustrative examples, dexterity and confidence grow with every piercing procedure - always supported by our instructors.</div>
+                </div>
             </div>
 
-            <!-- Últimas 3 imagens das aulas (aula-5 a aula-7) -->
-            <div class="image-grid-3">
-                <div class="img-card"><img src="aula-5.webp" alt="Piercing Course Module 5"></div>
-                <div class="img-card"><img src="aula-6.webp" alt="Piercing Course Module 6"></div>
-                <div class="img-card"><img src="aula-7.webp" alt="Piercing Course Module 7"></div>
+            <!-- Módulo 7 centralizado ou em linha completa (Studio Foundation) -->
+            <div style="max-width: 100%; margin-bottom: 30px;">
+                <div class="module-card" style="flex-direction: row; gap: 20px; align-items: center; padding: 20px;">
+                    <div class="module-img-container" style="width: 45%; margin-bottom: 0; flex-shrink: 0;">
+                        <img src="aula-7.webp" alt="Studio foundation, business and marketing">
+                        <div class="lesson-badge">11 lessons</div>
+                    </div>
+                    <div style="width: 55%;">
+                        <div class="module-title" style="text-align: left;">7. studio foundation, business and marketing</div>
+                        <div class="module-desc">From the first customer meeting, successful sales pitches and aftercare strategies to your individual business plan and piercing insurance. It includes valuable tips and tricks from long-standing studio owners, as well as all the basics for your marketing and strategies for increasing sales. Perfect for anyone who wants to open their own piercing studio or take over a piercing business and establish themselves as ...</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Seção de Vantagens Finais Estilo "Cards com Ícones Flutuantes" -->
@@ -491,7 +580,7 @@
         </div>
     </div>
 
-    <!-- Rodapé Legal posicionado estritamente no final de tudo -->
+    <!-- Rodapé Legal -->
     <footer>
         <div class="footer-links">
             <a href="#terms">Terms of Use</a>
