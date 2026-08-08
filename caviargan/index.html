@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,16 @@
             background: linear-gradient(to bottom, #fbc02d, #f57f17);
         }
     </style>
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 </head>
 <body class="pb-24">
 
@@ -232,53 +242,18 @@
                 </div>
             </div>
         </section>
-
-        <!-- SEÇÕES DE TEXTO LEGAL (EXIGIDAS PELO GOOGLE ADS PARA TRANSPARÊNCIA) -->
-        <section id="privacy" class="section-shell bg-gray-50 border-t border-gray-200 py-12 text-sm text-gray-700">
-            <div class="max-w-4xl mx-auto space-y-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h3>
-                <p>At CaviArgan, accessible from our promotional landing page, your privacy is of extreme importance to us. This Privacy Policy document outlines the types of personal information that is received and collected by our systems and how it is used.</p>
-                <p><strong>Log Files:</strong> Like many other Web sites, we make use of log files. The information inside the log files includes internet protocol ( IP ) addresses, browser type, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information.</p>
-                <p><strong>Cookies and Web Beacons:</strong> We use cookies to store information about visitors’ preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.</p>
-            </div>
-        </section>
-
-        <section id="terms" class="section-shell bg-white border-t border-gray-200 py-12 text-sm text-gray-700">
-            <div class="max-w-4xl mx-auto space-y-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Terms & Conditions</h3>
-                <p>By accessing and placing an order with CaviArgan, you confirm that you are in agreement with and bound by the terms of service contained in these Terms & Conditions. These terms apply to the entire website and any email or other type of communication between you and the platform.</p>
-                <p>Under no circumstances shall the platform team be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site.</p>
-                <p>Your placement of an order indicates your full acceptance of these terms, product pricing conditions, and shipping guidelines.</p>
-            </div>
-        </section>
-
-        <section id="shipping" class="section-shell bg-gray-50 border-t border-gray-200 py-12 text-sm text-gray-700">
-            <div class="max-w-4xl mx-auto space-y-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Shipping Policy</h3>
-                <p>All orders are processed promptly and securely packed. Delivery times depend on the shipping option selected during checkout and your geographical location within the United States.</p>
-                <p>We work hard to ensure smooth transit times, and tracking details are provided through the official merchant network once your order leaves our fulfillment facilities.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section-shell bg-white border-t border-gray-200 py-12 text-sm text-gray-700">
-            <div class="max-w-4xl mx-auto space-y-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h3>
-                <p>If you have any questions regarding your order, product details, or shipping status, customer support is available directly through our secure merchant checkout page or by replying to your order confirmation email.</p>
-            </div>
-        </section>
-
     </main>
 
-    <!-- RODAPÉ LEGAL COM LINKS DIRECIONADOS PARA AS SEÇÕES ACIMA -->
+    <!-- RODAPÉ LEGAL COM OS LINKS QUE ABREM EM MODAL (JANELA FLUTUANTE) -->
     <footer class="bg-gray-900 text-gray-400 py-12 px-6 border-t border-neutral-800">
         <div class="max-w-6xl mx-auto text-center space-y-6">
             <div class="brand text-white text-xl tracking-wider">CAVI<span>ARGAN</span></div>
             
             <div class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-300">
-                <a href="#privacy" class="hover:text-amber-500 transition">Privacy Policy</a>
-                <a href="#terms" class="hover:text-amber-500 transition">Terms & Conditions</a>
-                <a href="#contact" class="hover:text-amber-500 transition">Contact Us</a>
-                <a href="#shipping" class="hover:text-amber-500 transition">Shipping Policy</a>
+                <button onclick="openModal('privacyModal')" class="hover:text-amber-500 transition cursor-pointer">Privacy Policy</button>
+                <button onclick="openModal('termsModal')" class="hover:text-amber-500 transition cursor-pointer">Terms & Conditions</button>
+                <button onclick="openModal('contactModal')" class="hover:text-amber-500 transition cursor-pointer">Contact Us</button>
+                <button onclick="openModal('shippingModal')" class="hover:text-amber-500 transition cursor-pointer">Shipping Policy</button>
             </div>
 
             <div class="text-xs text-gray-500 leading-relaxed max-w-4xl mx-auto border-t border-neutral-800 pt-6">
@@ -291,6 +266,57 @@
             </div>
         </div>
     </footer>
+
+    <!-- JANELAS MODAIS (ABREM APENAS QUANDO CLICADAS NO RODAPÉ) -->
+
+    <!-- Privacy Modal -->
+    <div id="privacyModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative text-gray-800 shadow-2xl">
+            <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h3>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p>At CaviArgan, accessible from our promotional landing page, your privacy is of extreme importance to us. This Privacy Policy document outlines the types of personal information that is received and collected by our systems and how it is used.</p>
+                <p><strong>Log Files:</strong> Like many other Web sites, we make use of log files. The information inside the log files includes internet protocol ( IP ) addresses, browser type, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information.</p>
+                <p><strong>Cookies and Web Beacons:</strong> We use cookies to store information about visitors’ preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative text-gray-800 shadow-2xl">
+            <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Terms & Conditions</h3>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p>By accessing and placing an order with CaviArgan, you confirm that you are in agreement with and bound by the terms of service contained in these Terms & Conditions. These terms apply to the entire website and any email or other type of communication between you and the platform.</p>
+                <p>Under no circumstances shall the platform team be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site.</p>
+                <p>Your placement of an order indicates your full acceptance of these terms, product pricing conditions, and shipping guidelines.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shipping Modal -->
+    <div id="shippingModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative text-gray-800 shadow-2xl">
+            <button onclick="closeModal('shippingModal')" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Shipping Policy</h3>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p>All orders are processed promptly and securely packed. Delivery times depend on the shipping option selected during checkout and your geographical location within the United States.</p>
+                <p>We work hard to ensure smooth transit times, and tracking details are provided through the official merchant network once your order leaves our fulfillment facilities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative text-gray-800 shadow-2xl">
+            <button onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h3>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p>If you have any questions regarding your order, product details, or shipping status, customer support is available directly through our secure merchant checkout page or by replying to your order confirmation email.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- BARRA PRETA FIXA INFERIOR COM O BOTÃO DE COMPRA -->
     <div class="fixed bottom-0 left-0 w-full bg-black z-50 py-3 px-4 shadow-2xl border-t border-neutral-800">
