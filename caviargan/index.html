@@ -35,7 +35,7 @@
         }
     </style>
 </head>
-<body>
+<body class="pb-24"> <!-- Padding bottom extra para o conteúdo não ficar escondido atrás da barra fixa -->
 
     <div class="top-strip">YOUR DISCOUNT UP TO 72% OFF HAS BEEN APPLIED</div>
     
@@ -207,16 +207,16 @@
             </div>
         </section>
 
-        <!-- Bloco Final com tamanho proporcional e expansão idêntica às demais seções -->
+        <!-- Bloco Final: Pote Esquerda, Texto Centro, Senhora Direita -->
         <section class="section-shell bg-white py-16 border-t border-gray-100">
             <div class="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
                 
-                <!-- Foto da Senhora Loira (Lado Direito - Grande) -->
+                <!-- 1. Pote à Esquerda -->
                 <div class="flex justify-center">
-                    <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto09.png?raw=true" alt="Model" class="w-full max-w-sm h-auto object-cover rounded-2xl shadow-md border border-gray-100">
+                    <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto08.png?raw=true" alt="CaviArgan Free Shipping" class="w-full max-w-xs h-auto object-contain drop-shadow-lg">
                 </div>
 
-                <!-- 2. Textos no Centro -->
+                <!-- 2. Textos no Centro (Com o espaçamento e tamanhos corretos) -->
                 <div class="text-center">
                     <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 leading-tight">Maximize Savings, Time And Results With CaviArgan</h3>
                     <p class="text-base text-gray-700 leading-relaxed mb-6">
@@ -233,9 +233,9 @@
                     </p>
                 </div>
 
-                <!-- Pote com selo Free Shipping (Lado Esquerdo - Grande) -->
+                <!-- 3. Senhora Loira à Direita -->
                 <div class="flex justify-center">
-                    <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto08.png?raw=true" alt="CaviArgan Free Shipping" class="w-full max-w-xs h-auto object-contain drop-shadow-lg">
+                    <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto09.png?raw=true" alt="Model" class="w-full max-w-sm h-auto object-cover rounded-2xl shadow-md border border-gray-100">
                 </div>
 
             </div>
@@ -243,20 +243,32 @@
 
     </main>
 
-    <footer class="bg-gray-900 text-white text-center py-8">
-        <div class="brand text-white mb-2" style="font-size: 24px; letter-spacing: 1px;">CAVI<span>ARGAN</span></div>
-        <p class="text-sm text-gray-400 mb-4">© 2026 CaviArgan. All rights reserved.</p>
-        <a href="https://e-caviargan.com/#aff=Luizfilipe007" class="text-amber-500 font-bold hover:underline">Get your special offer →</a>
-    </footer>
-<!-- Botão de Compra Flutuante (Fixo na tela) -->
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-t border-gray-200 p-4 shadow-2xl md:hidden">
-        <div class="max-w-md mx-auto">
-            <a href="https://e-caviargan.com/#aff=Luizfilipe007" class="cta-button !mt-0 text-lg py-4 shadow-lg animate-pulse">
-                Try CaviArgan Now →
-            </a>
+    <!-- RODAPÉ LEGAL EXIGIDO PELO GOOGLE ADS (Termos, Privacidade e Isenção) -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6 border-t border-neutral-800">
+        <div class="max-w-6xl mx-auto text-center space-y-6">
+            <div class="brand text-white text-xl tracking-wider">CAVI<span>ARGAN</span></div>
+            
+            <!-- Links Obrigatórios de Políticas -->
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-300">
+                <a href="#" onclick="alert('Privacy Policy: We collect standard browsing data and information provided during checkout to process your orders securely.'); return false;" class="hover:text-amber-500 transition">Privacy Policy</a>
+                <a href="#" onclick="alert('Terms & Conditions: By purchasing, you agree to our standard shipping, return policies and single/subscription terms.'); return false;" class="hover:text-amber-500 transition">Terms & Conditions</a>
+                <a href="#" onclick="alert('Contact Us: Support available via the official checkout page.'); return false;" class="hover:text-amber-500 transition">Contact Us</a>
+                <a href="#" onclick="alert('Shipping Policy: Orders are processed promptly and shipped securely.'); return false;" class="hover:text-amber-500 transition">Shipping Policy</a>
+            </div>
+
+            <!-- Aviso Legal de Afiliado / Isenção de Responsabilidade -->
+            <div class="text-xs text-gray-500 leading-relaxed max-w-4xl mx-auto border-t border-neutral-800 pt-6">
+                <p class="mb-2">
+                    <strong>Disclaimer:</strong> This website is an independent promotional advertising platform and not the official manufacturer. We act as an affiliate marketer. All orders, customer service, and fulfillment are handled directly by the official merchant network.
+                </p>
+                <p>
+                    © 2026 CaviArgan. All rights reserved. The products and information found on this site are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.
+                </p>
+            </div>
         </div>
-    </div>
-    <!-- Barra Preta Fixa Inferior com Botão -->
+    </footer>
+
+    <!-- BARRA PRETA FIXA INFERIOR COM O BOTÃO DE COMPRA -->
     <div class="fixed bottom-0 left-0 w-full bg-black z-50 py-3 px-4 shadow-2xl border-t border-neutral-800">
         <div class="max-w-xl mx-auto">
             <a href="https://e-caviargan.com/#aff=Luizfilipe007" class="cta-button !mt-0 !mb-0 text-lg py-3 shadow-lg">
@@ -264,5 +276,6 @@
             </a>
         </div>
     </div>
+
 </body>
 </html>
