@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
         }
     </style>
 </head>
-<body class="pb-24"> <!-- Padding bottom extra para o conteúdo não ficar escondido atrás da barra fixa -->
+<body class="pb-24">
 
     <div class="top-strip">YOUR DISCOUNT UP TO 72% OFF HAS BEEN APPLIED</div>
     
@@ -207,16 +207,11 @@
             </div>
         </section>
 
-        <!-- Bloco Final: Pote Esquerda, Texto Centro, Senhora Direita -->
         <section class="section-shell bg-white py-16 border-t border-gray-100">
             <div class="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
-                
-                <!-- 1. Pote à Esquerda -->
                 <div class="flex justify-center">
                     <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto08.png?raw=true" alt="CaviArgan Free Shipping" class="w-full max-w-xs h-auto object-contain drop-shadow-lg">
                 </div>
-
-                <!-- 2. Textos no Centro (Com o espaçamento e tamanhos corretos) -->
                 <div class="text-center">
                     <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 leading-tight">Maximize Savings, Time And Results With CaviArgan</h3>
                     <p class="text-base text-gray-700 leading-relaxed mb-6">
@@ -232,31 +227,60 @@
                         Everyone deserves a celebrity-like treatment to stay young and beautiful!
                     </p>
                 </div>
-
-                <!-- 3. Senhora Loira à Direita -->
                 <div class="flex justify-center">
                     <img src="https://github.com/Kingfilipe/teste001/blob/main/caviargan/foto09.png?raw=true" alt="Model" class="w-full max-w-sm h-auto object-cover rounded-2xl shadow-md border border-gray-100">
                 </div>
+            </div>
+        </section>
 
+        <!-- SEÇÕES DE TEXTO LEGAL (EXIGIDAS PELO GOOGLE ADS PARA TRANSPARÊNCIA) -->
+        <section id="privacy" class="section-shell bg-gray-50 border-t border-gray-200 py-12 text-sm text-gray-700">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h3>
+                <p>At CaviArgan, accessible from our promotional landing page, your privacy is of extreme importance to us. This Privacy Policy document outlines the types of personal information that is received and collected by our systems and how it is used.</p>
+                <p><strong>Log Files:</strong> Like many other Web sites, we make use of log files. The information inside the log files includes internet protocol ( IP ) addresses, browser type, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information.</p>
+                <p><strong>Cookies and Web Beacons:</strong> We use cookies to store information about visitors’ preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.</p>
+            </div>
+        </section>
+
+        <section id="terms" class="section-shell bg-white border-t border-gray-200 py-12 text-sm text-gray-700">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Terms & Conditions</h3>
+                <p>By accessing and placing an order with CaviArgan, you confirm that you are in agreement with and bound by the terms of service contained in these Terms & Conditions. These terms apply to the entire website and any email or other type of communication between you and the platform.</p>
+                <p>Under no circumstances shall the platform team be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site.</p>
+                <p>Your placement of an order indicates your full acceptance of these terms, product pricing conditions, and shipping guidelines.</p>
+            </div>
+        </section>
+
+        <section id="shipping" class="section-shell bg-gray-50 border-t border-gray-200 py-12 text-sm text-gray-700">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Shipping Policy</h3>
+                <p>All orders are processed promptly and securely packed. Delivery times depend on the shipping option selected during checkout and your geographical location within the United States.</p>
+                <p>We work hard to ensure smooth transit times, and tracking details are provided through the official merchant network once your order leaves our fulfillment facilities.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-shell bg-white border-t border-gray-200 py-12 text-sm text-gray-700">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h3>
+                <p>If you have any questions regarding your order, product details, or shipping status, customer support is available directly through our secure merchant checkout page or by replying to your order confirmation email.</p>
             </div>
         </section>
 
     </main>
 
-    <!-- RODAPÉ LEGAL EXIGIDO PELO GOOGLE ADS (Termos, Privacidade e Isenção) -->
+    <!-- RODAPÉ LEGAL COM LINKS DIRECIONADOS PARA AS SEÇÕES ACIMA -->
     <footer class="bg-gray-900 text-gray-400 py-12 px-6 border-t border-neutral-800">
         <div class="max-w-6xl mx-auto text-center space-y-6">
             <div class="brand text-white text-xl tracking-wider">CAVI<span>ARGAN</span></div>
             
-            <!-- Links Obrigatórios de Políticas -->
             <div class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-300">
-                <a href="#" onclick="alert('Privacy Policy: We collect standard browsing data and information provided during checkout to process your orders securely.'); return false;" class="hover:text-amber-500 transition">Privacy Policy</a>
-                <a href="#" onclick="alert('Terms & Conditions: By purchasing, you agree to our standard shipping, return policies and single/subscription terms.'); return false;" class="hover:text-amber-500 transition">Terms & Conditions</a>
-                <a href="#" onclick="alert('Contact Us: Support available via the official checkout page.'); return false;" class="hover:text-amber-500 transition">Contact Us</a>
-                <a href="#" onclick="alert('Shipping Policy: Orders are processed promptly and shipped securely.'); return false;" class="hover:text-amber-500 transition">Shipping Policy</a>
+                <a href="#privacy" class="hover:text-amber-500 transition">Privacy Policy</a>
+                <a href="#terms" class="hover:text-amber-500 transition">Terms & Conditions</a>
+                <a href="#contact" class="hover:text-amber-500 transition">Contact Us</a>
+                <a href="#shipping" class="hover:text-amber-500 transition">Shipping Policy</a>
             </div>
 
-            <!-- Aviso Legal de Afiliado / Isenção de Responsabilidade -->
             <div class="text-xs text-gray-500 leading-relaxed max-w-4xl mx-auto border-t border-neutral-800 pt-6">
                 <p class="mb-2">
                     <strong>Disclaimer:</strong> This website is an independent promotional advertising platform and not the official manufacturer. We act as an affiliate marketer. All orders, customer service, and fulfillment are handled directly by the official merchant network.
